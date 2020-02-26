@@ -1,4 +1,5 @@
-import { storageService } from './storage.service.js'
+import {storageService} from '../../../main/services/storage.service.js'
+
 
 const NOTE_KEY = 'note';
 var notes = [{
