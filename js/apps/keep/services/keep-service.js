@@ -1,5 +1,6 @@
 import { storageService } from './storage.service.js'
 
+const NOTE_KEY = 'note';
 var notes = [{
         type: "noteText",
         isPinned: true,
@@ -29,10 +30,10 @@ var notes = [{
 
 
 function getnotes() {
-    var notesDB = storageService.load()
+    var notesDB = storageService.load(NOTE_KEY)
     if (!notesDB) notesDB = notes;
-
-    return Promise.resolve(notes);
+    storageService.store(NOTE_KEY, notesDB)
+    return Promise.resolve(notesDB);
 }
 
 
