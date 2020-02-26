@@ -1,1 +1,14 @@
-/* dfgf */
+.input-main {
+    background-color: rgb(204, 247, 247);
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.all-btn-input-main>* {
+    height: 50px;
+}
+
+.input-main-home {
+    width: 300px;
+}
