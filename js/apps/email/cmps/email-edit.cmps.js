@@ -28,13 +28,13 @@ export default {
     </section>
     `,
     data() {
-        return {
-           email= {
-            recipientAddress: '',
-            subject: '',
-            content: '',
-            }
-        }
+        // return {
+        //    email= {
+        //     recipientAddress: '',
+        //     subject: '',
+        //     content: '',
+        //     }
+        // }
     },
     created(){
         // const carId = this.$route.params.id;
@@ -48,14 +48,14 @@ export default {
         // }
     },
     methods: {
-        sendEmail() {
-            console.log('Saving');
-            emailService.saveEmail(this.email)
-            .then((savedCar) => {
-                eventBus.$emit('showMsg',{txt:'Saved a Car'+savedCar.id})
-                this.$router.push('/car')
-            })
-        },
+    //     sendEmail() {
+    //         console.log('Saving');
+    //         emailService.saveEmail(this.email)
+    //         .then((savedCar) => {
+    //             eventBus.$emit('showMsg',{txt:'Saved a Car'+savedCar.id})
+    //             this.$router.push('/car')
+    //         })
+    //     },
         
     },
 }

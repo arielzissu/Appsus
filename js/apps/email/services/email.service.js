@@ -1,5 +1,5 @@
 import {storageService} from '../../../main/services/storage.service.js'
-import {utilService} from '../../../services/util.service'
+import {utilService} from '../../../main/services/util.service.js'
 const EMAILS_KEY = 'emails';
 var emailsDB = [];
 let isMails = false;
