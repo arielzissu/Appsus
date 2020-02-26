@@ -34,7 +34,7 @@ var noteTodos = {
     methods: {
         openCard() {
             console.log('ev:', this.txt);
-            this.$emit('currTxt', this.txt, 0);
+            this.$emit('currTxt', this.txt, 2);
             this.txt = '';
         }
     }
@@ -54,7 +54,7 @@ var noteImage = {
     methods: {
         openCard() {
             console.log('ev:', this.txt);
-            this.$emit('currTxt', this.txt, 0);
+            this.$emit('currTxt', this.txt, 1);
             this.txt = '';
         }
     }

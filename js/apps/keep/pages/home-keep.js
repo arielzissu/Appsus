@@ -7,7 +7,7 @@ export default {
     <section>
         <h1>keep App!</h1>
         <div class="input-main">
-            <current-input @curr-txt="bringTxt" :numType="numType"></current-input>
+            <current-input @currTxt="bringTxt" :numType="numType"></current-input>
             <div class="all-btn-input-main">
                 <button @click="changeType(2)">List</button>
                 <button @click="changeType(0)">Text</button>

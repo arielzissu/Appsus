@@ -1,49 +1,49 @@
-import {storageService} from '../../../main/services/storage.service.js'
+import { storageService } from '../../../main/services/storage.service.js'
 
 const NOTE_KEY = 'note';
 var notesDB = [];
 
 function query() {
     // console.log('query')
-      var notes = storageService.load(notes_KEY);
-      if (!notes) {   //////this if is only for test
+    var notes = storageService.load(NOTE_KEY);
+    if (!notes) { //////this if is only for test
         notes = createNotes();
         storageService.store(NOTE_KEY, notes)
     }
-      if (notes) {        
+    if (notes) {
         notesDB = notes;
-        return Promise.resolve(notesDB) ; ///שים לב שזה מחזיר promise
-      }    
-  }
-
-
-  function createNotes() {
-    var notes = [{
-        type: "noteText",
-        isPinned: true,
-        info: { txt: "Fullstack Me Baby!" }
-    },
-
-    {
-        type: "noteImage",
-        info: {
-            url: "http://some-img/me",
-            title: "Me playing Mi"
-        },
-        style: { backgroundColor: "#00d" }
-    },
-
-    {
-        type: "noteTodos",
-        info: {
-            label: "How was it:",
-            todos: [
-                { txt: "Do that", doneAt: null },
-                { txt: "Do this", doneAt: 187111111 }
-            ]
-        }
+        return Promise.resolve(notesDB); ///שים לב שזה מחזיר promise
     }
-]; 
+}
+
+
+function createNotes() {
+    var notes = [{
+            type: "noteText",
+            isPinned: true,
+            info: { txt: "Fullstack Me Baby!" }
+        },
+
+        {
+            type: "noteImage",
+            info: {
+                url: "http://some-img/me",
+                title: "Me playing Mi"
+            },
+            style: { backgroundColor: "#00d" }
+        },
+
+        {
+            type: "noteTodos",
+            info: {
+                label: "How was it:",
+                todos: [
+                    { txt: "Do that", doneAt: null },
+                    { txt: "Do this", doneAt: 187111111 }
+                ]
+            }
+        }
+    ];
     return notes;
 }
 
