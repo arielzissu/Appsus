@@ -2,13 +2,35 @@
     export default {
     props:['email'],
     template: `
-  <div class="card-email">    
- <h1>email title: {{email.subject}}</h1>
- <article>email content:  </article>
- </div>
+  <div class="card-email">          
+   <span class="preview-sender">sender: {{email.sender}} </span>
+   <span class="preview-subject">subj: {{email.subject}}</span>
+   <span class="preview-some-content">cont: {{shortContent}}</span>
+   <span class="preview-sent-time">time: </span>  
+  </div>
     `,
-    created() {
-    },        
-} 
+    //  data(){
+    //   return {
+    //      sentTime: ''        
+    //   } 
+  // },
+  computed: {
+    shortContent(){
+      return this.email.content.slice(0,20)+'...'
+    }
+    // sentTime(){
+    //   return this.email.sentAt
+    // }
+  },
+  watch: {
 
-// {{email.title}} {{email.content}}
+  },
+  methods:{
+     
+  },
+  created(){
+
+    }
+}
+
+

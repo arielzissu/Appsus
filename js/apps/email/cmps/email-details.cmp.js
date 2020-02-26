@@ -3,10 +3,14 @@ import {emailService} from '../services/email.service.js'
 
 export default {
     template:`
-        <section v-if="email" class="email-details-container">             
-            <article>
-            <h1>{{email.subject}}</h1>
-            </article>
+        <section v-if="email" class="email-details-container">
+          <div class="details-header"> 
+              <h1 class="details-subject">{{email.subject}}</h1>
+              <button class="details-email-delete">Delete</button>             
+          </div>
+            <div class="details-sender">{{email.sender}}</div>
+            <article class="details-content">{{email.content}}</article>
+            <button class="details-email-replay">Replay</button>       
         </section>
     `,
     data(){
