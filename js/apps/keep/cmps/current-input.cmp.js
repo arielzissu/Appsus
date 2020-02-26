@@ -21,7 +21,7 @@ var noteTodos = {
 
 
 export default {
-    name: '',
+    name: 'currInput',
     template: `
     <section v-if="notes">
     <component :is="typeCmp"
@@ -44,10 +44,10 @@ export default {
     },
     computed: {
         typeCmp() {
-            this.notes[this.numType].type
+            return this.notes[this.numType].type
         },
         currInfo() {
-            this.notes[this.numType].info
+            return this.notes[this.numType].info
         }
     },
     components: {
