@@ -3,8 +3,8 @@
     props:['email'],
     template: `
   <div class="card-email">    
- <h1>email title: </h1>
- <article>email content: </article>
+ <h1>email title: {{email.subject}}</h1>
+ <article>email content:  </article>
  </div>
     `,
     created() {
