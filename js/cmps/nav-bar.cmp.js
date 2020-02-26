@@ -8,6 +8,9 @@ export default {
             <router-link class="nav-btn underLine-none" to="/email" exact>
             Mister Email
             </router-link>
+            <router-link class="nav-btn underLine-none" to="/home-keep" exact>
+            Miss Keep
+            </router-link>
         </div>
     `,
     methods: {
