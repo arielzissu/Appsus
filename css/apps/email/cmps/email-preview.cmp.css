@@ -1,3 +1,7 @@
 .card-email{
 background-color: aqua;
 }
+
+.card-email>*{
+    text-decoration: none;
+}

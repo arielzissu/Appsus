@@ -1,5 +1,5 @@
 import {storageService} from '../../../main/services/storage.service.js'
-// import {utilService} from '../../../services/util.service'
+import {utilService} from '../../../services/util.service'
 const EMAILS_KEY = 'emails';
 var emailsDB = [];
 let isMails = false;
@@ -7,11 +7,12 @@ let isMails = false;
 
 export const emailService = {
     query,
-    getById,    
+    getById, 
+    saveEmail   
 }
 
 function query() {
-  console.log('h')
+  // console.log('h')
     var emails = storageService.load(EMAILS_KEY);
     if (!emails) {   //////only for test
       emails = createEmails();
@@ -36,18 +37,31 @@ function createEmails() {
         body: 'Pick up!',
         isRead: false,
         sentAt : 1551133930594,
-        content: 'gfdggfgdggfdggfdgdfggfdgf'
+        content: 'gfdggfgdggfdggfdgdfggfdgf',
+        sender: 'Aviv'
       },
       { id: "OXeMG8wNzzz",
       subject: '222Wassap2222?',
       body: '2222Pick up22222!',
       isRead: false,
       sentAt : 1551133930599,
-      content: '22222gfdgfhgdhdhf'
+      content: '22222gfdgfhgdhdhf',
+      sender: 'Aviv2'
     }
     ];
  
     return emails;
 }
 
+function saveEmail(email) {
+  // if (email.id) return _updateemail(email)
+  // else return _addEmail(email);
+  return _addEmail(email);
+}
 
+function _addEmail(email) {
+  email.id = utilService.makeId()
+  emails.push(email);
+  storageService.store(KEY, emails)
+  return Promise.resolve(email)
+} 
