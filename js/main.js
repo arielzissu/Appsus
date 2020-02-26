@@ -7,7 +7,6 @@ new Vue({
     router,
     template: `
     <section>
-        <h1>aaaaa</h1>
         <nav-bar></nav-bar>
         <router-view></router-view>
     </section>
