@@ -1,4 +1,4 @@
-import {emailService} from '../services/email.service.js'
+import { emailService } from '../services/email.service.js'
 // import {eventBus} from '../../../main/services/event-bus.service'
 
 export default {
@@ -30,14 +30,14 @@ export default {
     data() {
         return {
             email: emailService.getEmptyEmail()
-        //    email: {
-        //     recipientAddress: '',
-        //     subject: '',
-        //     content: '',
-        //     }
+                //    email: {
+                //     recipientAddress: '',
+                //     subject: '',
+                //     content: '',
+                //     }
         }
     },
-    created(){
+    created() {
         const emailId = this.$route.params.id;
         if (emailId) {
             emailService.getById(emailId)
@@ -58,6 +58,6 @@ export default {
             //     // this.$router.push('/email')
             // })
         },
-        
+
     },
 }

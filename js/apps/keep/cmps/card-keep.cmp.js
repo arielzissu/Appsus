@@ -18,6 +18,8 @@ export default {
                 </ul>
             </div>
         </div>
+
+        
     </section>
     `,
     props: ['note'],

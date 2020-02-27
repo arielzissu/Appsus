@@ -6,9 +6,16 @@ import emailEdit from '../apps/email/cmps/email-edit.cmps.js'
 
 const routes = [
     { path: '/', component: homePage },
-    { path: '/email', component: emailApp },
+    {
+        path: '/email',
+        component: emailApp,
+        // children: [{
+        //     path: 'create/:id?',
+        //     component: emailDetails
+        // }]
+    },
     { path: '/email/create/:id?', component: emailEdit },
-    {path:'/email/:id', component: emailDetails},
+    { path: '/email/:id', component: emailDetails },
     { path: '/home-keep', component: keepApp },
 ];
 const router = new VueRouter({ routes })
