@@ -8,7 +8,8 @@ let isMails = false;
 export const emailService = {
     query,
     getById, 
-    saveEmail   
+    saveEmail,
+    getEmptyEmail   
 }
 
 function query() {
@@ -56,12 +57,30 @@ function createEmails() {
 function saveEmail(email) {
   // if (email.id) return _updateemail(email)
   // else return _addEmail(email);
-  return _addEmail(email);
+  _addEmail(email);
+  // return _addEmail(email);
 }
 
 function _addEmail(email) {
   email.id = utilService.makeId()
-  emails.push(email);
-  storageService.store(KEY, emails)
-  return Promise.resolve(email)
+  emailsDB.push(email);
+  storageService.store(EMAILS_KEY, emailsDB)
+  // return Promise.resolve(email)
 } 
+
+
+
+function getEmptyEmail() {
+  var emptyEmail =  {
+    // id: utilService.makeId(),
+    subject: '',
+    body: '',
+    isRead: false,
+    sentAt : null,
+    content: '',
+    sender: ''
+  }
+  return emptyEmail;
+}
+
+// new Date().getTime()

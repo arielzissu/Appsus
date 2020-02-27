@@ -1,5 +1,5 @@
 import {emailService} from '../services/email.service.js'
-// import {eventBus} from '../services/event-bus.service.js'
+// import {eventBus} from '../../../main/services/event-bus.service'
 
 export default {
     template: `
@@ -11,7 +11,7 @@ export default {
        <form @submit.prevent="sendEmail">
           <div class="email-edit-recipient-address">
             <span>To</span>
-            <input required type="text" v-model.trim="email.recipientAddress" />
+            <input required type="text" v-model.trim="email.sender" />
           </div>   
 
           <div class="email-edit-subject">
@@ -29,32 +29,34 @@ export default {
     `,
     data() {
         return {
-           email: {
-            recipientAddress: '',
-            subject: '',
-            content: '',
-            }
+            email: emailService.getEmptyEmail()
+        //    email: {
+        //     recipientAddress: '',
+        //     subject: '',
+        //     content: '',
+        //     }
         }
     },
     created(){
-        const carId = this.$route.params.id;
-        if (carId) {
-            carService.getById(carId)
-                .then(car => {
+        const emailId = this.$route.params.id;
+        if (emailId) {
+            emailService.getById(emailId)
+                .then(email => {
                     // DEEP copy
-                    const copyCar = JSON.parse(JSON.stringify(car))
-                    this.car = copyCar;
+                    const copyEmail = JSON.parse(JSON.stringify(email))
+                    this.email = copyEmail;
                 })
         }
     },
     methods: {
         sendEmail() {
-            console.log('Saving');
-            emailService.saveEmail(this.email)
-            .then((savedCar) => {
-                eventBus.$emit('showMsg',{txt:'Saved a Car'+savedCar.id})
-                this.$router.push('/car')
-            })
+            console.log('Saving', this.email.subject);
+            emailService.saveEmail(this.email);
+            this.$router.push('/email');
+            // .then(() => {
+            //     eventBus.$emit('showMsg',{txt:'Youer email sent successfully to:'})
+            //     // this.$router.push('/email')
+            // })
         },
         
     },
