@@ -1,5 +1,4 @@
-
-import {emailService} from './services/email.service.js'
+import { emailService } from './services/email.service.js'
 import emailList from './cmps/email-list.cmp.js'
 import leftNav from './cmps/email-left-nav-bar.cmps.js'
 import { eventBus } from '../../main/services/event-bus.service.js'
@@ -14,30 +13,28 @@ export default {
         </div>
         <div class="email-list-container">
             <email-list :emails="emails" ></email-list>
+            <!-- <router-view></router-view> -->
         </div>
     </section>
-`  ,
+`,
     data() {
         return {
-           emails:[],
-           succsessMsg:{}
+            emails: [],
+            succsessMsg: {}
         }
     },
-    
-    created() {
-      emailService.query()
-     .then(emails=>this.emails=emails);
 
-     eventBus.$on('showMsg',(msg)=>{
-        console.log('yes',msg)
-     })
-     
+    created() {
+        emailService.query()
+            .then(emails => this.emails = emails);
+
+        eventBus.$on('showMsg', (msg) => {
+            console.log('yes', msg)
+        })
+
     },
-    components:{
+    components: {
         emailList,
-        leftNav        
+        leftNav
     }
 }
-
-
-

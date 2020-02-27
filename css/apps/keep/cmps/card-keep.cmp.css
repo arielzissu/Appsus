@@ -1,0 +1,19 @@
+.note-prev-main-container {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.card-keep-txt {
+    height: 100px;
+    width: 100px;
+}
+
+.card-keep-cmp {
+    background-color: rgb(240, 234, 155);
+}
+
+.card-keep-txt>* {
+    /* background-color: rgb(228, 119, 47); */
+}
