@@ -2,6 +2,7 @@ export default {
     name: 'note-prev',
     template: `
     <section >
+        {{note.id}}
         <div v-if="note.type==='txt'" class="card-txt">
             <p>{{note.info.txt}}</p>
         </div>
