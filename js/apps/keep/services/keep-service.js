@@ -6,7 +6,7 @@ var notesDB = [];
 function query() {
     var notes = storageService.load(NOTE_KEY);
     if (!notes) { //////this if is only for test
-        notes = createNotes();
+        notes = _createNotes();
         storageService.store(NOTE_KEY, notes)
     }
     if (notes) {
@@ -15,8 +15,9 @@ function query() {
     }
 }
 
-function createNotes() {
+function _createNotes() {
     var notes = [{
+            style: { backgroundColor: "#00d" },
             id: 11111,
             type: "txt",
             isPinned: false,
@@ -24,16 +25,18 @@ function createNotes() {
         },
 
         {
+            style: 'blue',
             id: 22222,
             type: "img",
             info: {
-                url: "http://some-img/me",
+                url: "https://images.theconversation.com/files/304244/original/file-20191128-178107-9wucox.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip",
                 title: "My picture:"
             },
             style: { backgroundColor: "#00d" }
         },
 
         {
+            style: { backgroundColor: "#00d" },
             id: 33333,
             type: "list",
             info: {
@@ -60,6 +63,7 @@ function addNote(txt, type) {
 function _putIntoFormat(txt, type) {
     if (type === "txt") {
         return {
+            style: { backgroundColor: "#00d" },
             id: _makeId(),
             type: "txt",
             isPinned: false,
@@ -67,16 +71,17 @@ function _putIntoFormat(txt, type) {
         }
     } else if (type === "img") {
         return {
+            style: { backgroundColor: "#00d" },
             id: _makeId(),
             type: "img",
             info: {
                 url: txt,
                 title: "My picture:" ////////לתת למשתמש לבחור את  הכותרת
             },
-            style: { backgroundColor: "#00d" }
         }
     } else if (type === "list") {
         return {
+            style: { backgroundColor: "#00d" },
             id: _makeId(),
             type: "list",
             info: {

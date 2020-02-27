@@ -2,12 +2,12 @@
     display: grid;
     gap: 10px;
     padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .card-keep-txt {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 150px;
 }
 
 .card-keep-cmp {
@@ -16,4 +16,9 @@
 
 .card-keep-txt>* {
     /* background-color: rgb(228, 119, 47); */
+}
+
+.img-note {
+    height: 7.5rem;
+    margin-left: 10px;
 }
