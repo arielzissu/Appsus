@@ -1,5 +1,3 @@
-// import { keepService } from '../services/keep-service.js'
-
 export default {
     name: 'currInput',
     template: `
@@ -7,7 +5,6 @@ export default {
             <input type="text" 
              v-model="txt"
             @keyup.enter="getChanged()">
-        
     </section>
     `,
     data() {
