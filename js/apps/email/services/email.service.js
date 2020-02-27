@@ -62,9 +62,10 @@ function saveEmail(email) {
 }
 
 function _addEmail(email) {
-  email.id = utilService.makeId()
+  email.id = utilService.makeId();
+  email.sentAt= new Date().getTime();
   emailsDB.push(email);
-  storageService.store(EMAILS_KEY, emailsDB)
+  storageService.store(EMAILS_KEY, emailsDB);
   // return Promise.resolve(email)
 } 
 
@@ -75,8 +76,7 @@ function getEmptyEmail() {
     // id: utilService.makeId(),
     subject: '',
     body: '',
-    isRead: false,
-    sentAt : null,
+    isRead: false,    
     content: '',
     sender: ''
   }
