@@ -14,7 +14,6 @@ export default {
     },
     methods: {
         getChanged() {
-            console.log('txt:', this.txt);
             this.$emit('currTxt', this.txt);
             this.txt = '';
         }

@@ -32,7 +32,6 @@ export default {
             this.numType = numType
         },
         createNote(txt) {
-            console.log('createNote - home keep', txt, "    your numTYpe: ", this.numType);
             keepService.addNote(txt, this.numType)
                 .then(notes => this.notes = notes)
         }
