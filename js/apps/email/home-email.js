@@ -7,10 +7,13 @@ import leftNav from './cmps/email-left-nav-bar.cmps.js'
 
 export default {
     template: `
-    <section class="email-container"> 
-    <h1>emails box</h1>
-    <email-list :emails="emails" ></email-list>
-    <left-nav></left-nav> 
+    <section class="email-home-container"> 
+        <div class="left-nav-container">
+            <left-nav></left-nav> 
+        </div>
+        <div class="email-list-container">
+            <email-list :emails="emails" ></email-list>
+        </div>
     </section>
 `  ,
     data() {

@@ -1,7 +1,24 @@
 .card-email{
-background-color: aqua;
+border: black solid 1.5px;
+padding: 5px;
+display: flex;
+justify-content: space-between;
+}
+
+.card-email:hover{
+background-color: rgb(187, 179, 179);
 }
 
 .card-email>*{
-    text-decoration: none;
+color:black;
+font-weight: 500;
 }
+
+a{
+    text-decoration:none;
+}
+
+
+
+
+
