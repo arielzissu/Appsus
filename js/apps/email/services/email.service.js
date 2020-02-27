@@ -9,7 +9,8 @@ export const emailService = {
     query,
     getById, 
     saveEmail,
-    getEmptyEmail   
+    getEmptyEmail,
+    removeEmail  
 }
 
 function query() {
@@ -55,17 +56,18 @@ function createEmails() {
 }
 
 function saveEmail(email) {
-  if (email.id) return _updateEmail(email)
+  if (email.id) return _updateEmail(email);
   else return _addEmail(email);
   // _addEmail(email);
   // return _addEmail(email);
 }
 
 function _updateEmail(email) {
+  email.sentAt= new Date().getTime();
   const idx = emailsDB.findIndex(curremail => curremail.id === email.id);
-  emailsDB.splice(idx, 1, email)
-  storageService.store(EMAILS_KEY, emailsDB)
-  return Promise.resolve(email)
+  emailsDB.splice(idx, 1, email);
+  storageService.store(EMAILS_KEY, emailsDB);
+  return Promise.resolve(email);
 } 
 
 function _addEmail(email) {
@@ -73,10 +75,16 @@ function _addEmail(email) {
   email.sentAt= new Date().getTime();
   emailsDB.push(email);
   storageService.store(EMAILS_KEY, emailsDB);
-  return Promise.resolve()
+  return Promise.resolve();
 } 
 
-
+function removeEmail(emailId) {
+  const idx = emailsDB.findIndex(email => email.id === emailId)
+  // if(idx === -1) return Promise.reject('DID NOT REMOVE EMAIL')
+  emailsDB.splice(idx, 1);
+  storageService.store(EMAILS_KEY, emailsDB)
+  return Promise.resolve()
+}
 
 function getEmptyEmail() {
   var emptyEmail =  {

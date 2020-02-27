@@ -12,7 +12,7 @@ export default {
             <left-nav></left-nav> 
         </div>
         <div class="email-list-container">
-            <email-list :emails="emails" ></email-list>
+            <email-list :emails="emails"  ></email-list>
             <!-- <router-view></router-view> -->
         </div>
     </section>
@@ -32,6 +32,14 @@ export default {
             console.log('yes', msg)
         })
 
+    },
+    methods: {
+        // setFilter(filterBy) {
+        //     console.log('AHA!');
+        //     this.filterBy = filterBy
+        // },
+        
+       
     },
     components: {
         emailList,

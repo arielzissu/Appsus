@@ -29,12 +29,7 @@ export default {
     `,
     data() {
         return {
-            email: emailService.getEmptyEmail()
-                //    email: {
-                //     recipientAddress: '',
-                //     subject: '',
-                //     content: '',
-                //     }
+            email: emailService.getEmptyEmail()                
         }
     },
     created() {

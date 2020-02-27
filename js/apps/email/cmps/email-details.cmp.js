@@ -6,7 +6,8 @@ export default {
         <section v-if="email" class="email-details-container">
           <div class="details-header"> 
               <h1 class="details-subject">{{email.subject}}</h1>
-              <button class="details-email-delete">Delete</button>             
+              <button v-on:click="removeEmail" class="details-email-delete">Delete</button>              
+            
           </div>
             <div class="details-sender">{{email.sender}}</div>
             <article class="details-content">{{email.content}}</article>
@@ -34,6 +35,18 @@ export default {
             .then(email => {
                 this.email = email    
             })
+        },
+        removeEmail(emailId) {
+            console.log('Removing');
+            emailService.removeEmail(emailId)
+                .then(()=>{
+                    console.log(`email ${emailId} deleted succesfully`);
+                    this.$router.push('/email');
+                    // eventBus.$emit(EVENT_SHOW_MSG, {
+                    //     txt: `Car ${emailId} deleted succesfully`,
+                    //     type: 'success'
+                    // })
+                })
         }
     },
     created(){

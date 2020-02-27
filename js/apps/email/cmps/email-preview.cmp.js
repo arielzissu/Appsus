@@ -6,7 +6,7 @@
    <span class="preview-sender">sender: {{email.sender}} </span>
    <span class="preview-subject">subj: {{email.subject}}</span>
    <span class="preview-some-content">cont: {{shortContent}}</span>
-   <span class="preview-sent-time">time: </span>  
+   <span class="preview-sent-time">{{sentTime}} </span>  
   </div>
     `,
     //  data(){
@@ -17,13 +17,10 @@
   computed: {
     shortContent(){
       return this.email.content.slice(0,20)+'...'
+    },
+    sentTime(){
+      return new Date(this.email.sentAt).toUTCString() 
     }
-    // sentTime(){
-    //   return this.email.sentAt
-    // }
-  },
-  watch: {
-
   },
   methods:{
      
