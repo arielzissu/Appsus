@@ -1,7 +1,7 @@
 export default {
     template: `
         <div class="email-left-navbar">
-            <router-link class="nav-btn underLine-none" to="/email/create" exact>
+            <router-link class="left-nav-btn underLine-none" to="/email/create" exact>
             <button class="btn-compose">+ Compose</button> 
             <div class="all-btn-side-nav">  
                 <button>Inbox</button>            
