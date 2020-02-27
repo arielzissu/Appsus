@@ -55,18 +55,25 @@ function createEmails() {
 }
 
 function saveEmail(email) {
-  // if (email.id) return _updateemail(email)
-  // else return _addEmail(email);
-  _addEmail(email);
+  if (email.id) return _updateEmail(email)
+  else return _addEmail(email);
+  // _addEmail(email);
   // return _addEmail(email);
 }
+
+function _updateEmail(email) {
+  const idx = emailsDB.findIndex(curremail => curremail.id === email.id);
+  emailsDB.splice(idx, 1, email)
+  storageService.store(EMAILS_KEY, emailsDB)
+  return Promise.resolve(email)
+} 
 
 function _addEmail(email) {
   email.id = utilService.makeId();
   email.sentAt= new Date().getTime();
   emailsDB.push(email);
   storageService.store(EMAILS_KEY, emailsDB);
-  // return Promise.resolve(email)
+  return Promise.resolve()
 } 
 
 

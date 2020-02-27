@@ -10,7 +10,10 @@ export default {
           </div>
             <div class="details-sender">{{email.sender}}</div>
             <article class="details-content">{{email.content}}</article>
-            <button class="details-email-replay">Replay</button>       
+
+            <router-link :to="'/email/create/'+email.id"> 
+               <button class="details-email-replay">Replay</button>  
+            </router-link>      
         </section>
     `,
     data(){

@@ -51,8 +51,10 @@ export default {
     methods: {
         sendEmail() {
             console.log('Saving', this.email.subject);
-            emailService.saveEmail(this.email);
-            this.$router.push('/email');
+            emailService.saveEmail(this.email)
+            .then(() => {
+                    this.$router.push('/email');
+                })
             // .then(() => {
             //     eventBus.$emit('showMsg',{txt:'Youer email sent successfully to:'})
             //     // this.$router.push('/email')
