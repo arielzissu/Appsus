@@ -3,7 +3,7 @@ export const eventBus = new Vue()
 
 // export const EMAIL_SENT_MSG  = 'showMsg';
 
-// eventBus.$on(EVENT_PUK, (num)=>{
+// eventBu  s.$on(EVENT_PUK, (num)=>{
 
 //     const msg = {
 //         txt: 'Got a Puk!',
