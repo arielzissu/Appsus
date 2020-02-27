@@ -1,103 +1,25 @@
-import { keepService } from '../services/keep-service.js'
-
-var noteText = {
-    template: `
-    <section>
-        <input @keyup.enter="openCard(0)" v-model="txt" class="input-main-home" type="text" placeholder="Text Here">
-    </section>
-    `,
-    data() {
-        return {
-            txt: ''
-        }
-    },
-    methods: {
-        openCard() {
-            console.log('ev:', this.txt);
-            this.$emit('currTxt', this.txt, 0);
-            this.txt = '';
-        }
-    }
-}
-
-var noteTodos = {
-    template: `
-    <section>
-        <input @keyup.enter="openCard(2)" v-model="txt" class="input-main-home" type="text" placeholder="Enter comma separated list...">
-    </section>
-    `,
-    data() {
-        return {
-            txt: ''
-        }
-    },
-    methods: {
-        openCard() {
-            console.log('ev:', this.txt);
-            this.$emit('currTxt', this.txt, 2);
-            this.txt = '';
-        }
-    }
-}
-
-var noteImage = {
-    template: `
-    <section>
-        <input @keyup.enter="openCard(1)" v-model="txt" class="input-main-home" type="text" placeholder="Enter image URL...">
-    </section>
-    `,
-    data() {
-        return {
-            txt: ''
-        }
-    },
-    methods: {
-        openCard() {
-            console.log('ev:', this.txt);
-            this.$emit('currTxt', this.txt, 1);
-            this.txt = '';
-        }
-    }
-}
-
+// import { keepService } from '../services/keep-service.js'
 
 export default {
     name: 'currInput',
     template: `
-    <section v-if="notes">
-        <component :is="typeCmp" @currTxt="givenTxt"></component>
+    <section >      
+            <input type="text" 
+             v-model="txt"
+            @keyup.enter="getChanged()">
+        
     </section>
     `,
-    props: ['numType'],
     data() {
         return {
-            notes: null
-        }
-    },
-    created() {
-        keepService.getnotes()
-            .then(notes => {
-                this.notes = notes
-                console.log('this.notes', this.notes);
-            })
-    },
-    computed: {
-        typeCmp() {
-            return this.notes[this.numType].type;
-        },
-        currInfo() {
-            return this.notes[this.numType].info;
+            txt: ''
         }
     },
     methods: {
-        givenTxt(txt, numType) {
-            console.log('1111', txt, numType);
-            this.$emit('curr-txt', txt, numType)
+        getChanged() {
+            console.log('txt:', this.txt);
+            this.$emit('currTxt', this.txt);
+            this.txt = '';
         }
-    },
-    components: {
-        noteText,
-        noteTodos,
-        noteImage
     },
 }

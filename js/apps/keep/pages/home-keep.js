@@ -7,31 +7,34 @@ export default {
     <section>
         <h1>keep App!</h1>
         <div class="input-main">
-            <current-input @currTxt="bringTxt" :numType="numType"></current-input>
+            <current-input @currTxt="createNote" :notes="notes" :numType="numType"></current-input>
             <div class="all-btn-input-main">
-                <button @click="changeType(2)">List</button>
-                <button @click="changeType(0)">Text</button>
-                <button @click="changeType(1)">Img</button>
+                <button @click="changeType('list')">List</button>
+                <button @click="changeType('txt')">Text</button>
+                <button @click="changeType('img')">Image</button>
             </div>
         </div>
-        <list-cards :numType="numType" :text="currText"></list-cards>
+        <list-cards :notes="notes"></list-cards>
     </section>
     `,
     data() {
         return {
-            numType: 0,
-            currText: ''
+            numType: 'txt',
+            notes: []
         }
+    },
+    created() {
+        keepService.query()
+            .then(notes => this.notes = notes)
     },
     methods: {
         changeType(numType) {
             this.numType = numType
         },
-        bringTxt(txt, num) {
-            console.log('222', txt, num);
-            this.currText = txt;
-            this.numType = num;
-            keepService.addNote(txt, num);
+        createNote(txt) {
+            console.log('createNote - home keep', txt, "    your numTYpe: ", this.numType);
+            keepService.addNote(txt, this.numType)
+                .then(notes => this.notes = notes)
         }
     },
     components: {
