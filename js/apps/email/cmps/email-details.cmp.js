@@ -19,7 +19,8 @@ export default {
     `,
     data(){
         return {
-            email: null           
+            email: null  ,
+            existId: null         
         } 
     },
     computed: {
@@ -30,28 +31,30 @@ export default {
     },
     methods:{
         getemail(){
-            const emailId = +this.$route.params.id
-            emailService.getById(emailId)
+            //  this.existId = +this.$route.params.id
+            emailService.getById(this.existId)
             .then(email => {
                 this.email = email    
             })
         },
-        removeEmail(emailId) {
-            console.log('Removing');
-            emailService.removeEmail(emailId)
+        removeEmail() {
+            console.log(this.existId);
+            emailService.removeEmail(this.existId)
                 .then(()=>{
-                    console.log(`email ${emailId} deleted succesfully`);
-                    this.$router.push('/email');
-                    // eventBus.$emit(EVENT_SHOW_MSG, {
-                    //     txt: `Car ${emailId} deleted succesfully`,
-                    //     type: 'success'
-                    // })
+                    console.log(`email deleted succesfully`)
+                    this.$router.push('/email')                
                 })
-        }
+            
+        }     
+        
     },
     created(){
+        this.existId = this.$route.params.id;
         emailService.getById(this.$route.params.id)
-        .then(email=>this.email= email)
-
-    }
+        .then(email=>this.email= email);
+        emailService.markAsRead(this.existId);
+    },
+    
 }
+
+

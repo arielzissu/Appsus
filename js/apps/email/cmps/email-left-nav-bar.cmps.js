@@ -12,7 +12,7 @@ export default {
          
                     <button>Started</button>            
                     <button>Sent Mail</button>            
-                    <button>Junk</button>            
+                    <!-- <button>Junk</button>             -->
             </div>         
             
         </div>
