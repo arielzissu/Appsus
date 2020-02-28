@@ -6,7 +6,10 @@ export default {
     <section class="email-create-form">
         <div class="email-edit-header"> 
              <h1>New Message</h1>
+        <router-link to="/email" exact>
              <button class="email-edit-btn-close">X</button>
+        </router-link>
+
         </div>
        <form @submit.prevent="sendEmail">
           <div class="email-edit-recipient-address">
