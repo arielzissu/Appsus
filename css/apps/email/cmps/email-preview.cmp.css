@@ -18,7 +18,9 @@ a{
     text-decoration:none;
 }
 
-
+.unreadBg{
+    background-color: gray;
+}
 
 
 
