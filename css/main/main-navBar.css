@@ -21,7 +21,10 @@
 }
 
 .nav-bar-menu-btn {
+    background-color: rgb(243, 182, 67);
     display: none;
+    height: 30px;
+    width: 30px;
 }
 
 @media (max-width: 800px) {
@@ -61,7 +64,7 @@
         right: 0;
         top: 0;
         height: 100vh;
-        background-color: rgb(17, 13, 13);
+        background-color: rgb(233, 185, 80);
         border-left: 1px solid #d2d2d2;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
         min-width: 200px;
