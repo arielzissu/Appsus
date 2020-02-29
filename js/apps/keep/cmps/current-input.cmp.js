@@ -4,12 +4,15 @@ export default {
     <section >      
             <input type="text" 
              v-model="txt"
+             :placeholder="kindOfNote"
             @keyup.enter="getChanged()">
     </section>
     `,
+    prop: ['numType'],
     data() {
         return {
-            txt: ''
+            txt: '',
+            kindOfNote: 'Writing text...'
         }
     },
     methods: {

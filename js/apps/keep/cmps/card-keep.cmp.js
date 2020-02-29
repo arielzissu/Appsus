@@ -1,3 +1,4 @@
+import { keepService } from '.././services/keep-service.js'
 export default {
     name: 'note-prev',
     template: `
@@ -17,12 +18,10 @@ export default {
         </div>
 
         <div v-if="isCliked">
-            <button>Delite</button>
-            <button>Edit</button>
-            <button>Pin</button>
-            <input @change="changeColor()" value="note.style.backgroundColor" v-model="note.style.backgroundColor" type="color">
+            <button @click="onDelete"><img height="20px" src="../img/delete.png" alt="Delete"></button>
+            <button @click="onPin"><img height="20px" src="../img/pin.png" alt="Pin"></button>
+                <input @change="changeColor()" value="note.style.backgroundColor" v-model="note.style.backgroundColor" type="color">
         </div>
-
     </section>
     `,
     props: ['note'],
@@ -43,9 +42,13 @@ export default {
         onCliked() {
             this.isCliked = !this.isCliked
         },
-        changeColor(ev) {
-            // this.currColor = this.note.style
-            console.log('ev', ev);
+        onDelete() {
+            console.log('this.note.id', this.note.id);
+            keepService.removeNote(this.note.id)
+                .then(ans => console.log(ans))
+        },
+        onPin() {
+            keepService.pinningNote(this.note.id)
         }
 
     }

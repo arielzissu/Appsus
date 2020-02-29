@@ -16,9 +16,16 @@
 
 .card-keep-txt>* {
     /* background-color: rgb(228, 119, 47); */
+    /* background-color: rgb(240, 241, 159); */
 }
 
 .img-note {
     height: 7.5rem;
     margin-left: 10px;
+}
+
+textarea {
+    height: 191px;
+    width: 228px;
+    /* border: none; */
 }
