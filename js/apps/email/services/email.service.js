@@ -35,7 +35,7 @@ function getById(emailId) {
 function createEmails() { //create starter data
     const emails = [{
             id: "OXeMG8wNskc",
-            subject: 'Wassap?',
+            subject: 'Open me',
             body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930694,
@@ -46,8 +46,8 @@ function createEmails() { //create starter data
         },
         {
             id: "OXeMG8wNfzz",
-            subject: '222Wassap2222?',
-            body: '2222Pick up22222!',
+            subject: 'Wassap?',
+            body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930598,
             content: 'Lorem ipsum bla bla gassaf',
@@ -58,7 +58,7 @@ function createEmails() { //create starter data
         },
         {
             id: "OXecs8wN6zz",
-            subject: 'Wassap2?',
+            subject: 'Purim coming!',
             body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930589,
@@ -70,7 +70,7 @@ function createEmails() { //create starter data
         },
         {
             id: "OXeba34Nzzz",
-            subject: 'Wassap?',
+            subject: 'Until when??',
             body: 'Pick up2!',
             isRead: false,
             sentAt: 1551133940099,
@@ -122,7 +122,7 @@ function createEmails() { //create starter data
             body: 'Pick up222!',
             isRead: false,
             sentAt: 1531133730599,
-            content: 'maasd koreadasd? aniad beassseder',
+            content: 'maasd koreadasd? aniadr',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Roi'

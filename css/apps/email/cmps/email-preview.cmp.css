@@ -3,6 +3,7 @@
     padding: 5px;
     display: flex;
     justify-content: space-between;
+    background-color: gray;
 }
 
 .card-email:hover {
@@ -19,9 +20,13 @@ a {
 }
 
 .unreadBg {
-    background-color: gray;
+    background-color: rgb(252, 252, 252);
 }
 
 .preview-sender {
     font-weight: 800;
+}
+
+.preview-subject {
+    font-weight: 700;
 }

@@ -11,3 +11,4 @@
 @import "../apps/email/cmps/email-edit.cmp.css";
 @import "../apps/keep/cmps/current-input.cmp.css";
 @import "../apps/book/style.css";
+@import "./user-msg.css";

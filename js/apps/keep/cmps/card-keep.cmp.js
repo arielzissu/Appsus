@@ -1,4 +1,6 @@
 import { keepService } from '.././services/keep-service.js'
+import { eventBus } from '../../../main/services/event-bus.service.js'
+
 export default {
     name: 'note-prev',
     template: `
@@ -43,15 +45,15 @@ export default {
             this.isCliked = !this.isCliked
         },
         onDelete() {
-            console.log('this.note.id', this.note.id);
             keepService.removeNote(this.note.id)
-                .then(ans => console.log(ans))
+                .then(ans => {
+                    eventBus.$emit('showMsg', { txt: `Deleted the ${ans}(id) note` })
+                })
         },
         onPin() {
             keepService.pinningNote(this.note.id)
         },
         onChangeColor(color) {
-            console.log('color: ', color);
             keepService.changeColor(color, this.note.id);
         }
 
