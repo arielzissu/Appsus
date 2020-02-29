@@ -2,10 +2,10 @@ import { keepService } from '.././services/keep-service.js'
 export default {
     name: 'note-prev',
     template: `
-    <section :style="{backgroundColor: note.style.backgroundColor}" @click="onCliked">
+    <section class="card-keep-container-main" :style="{backgroundColor: note.style.backgroundColor}" @click="onCliked">
 
         <div  v-if="note.type === 'txt'" class="card-keep-txt">
-            <textarea :style="{backgroundColor: note.style.backgroundColor}">{{note.info.txt}}</textarea>
+            <textarea class="card-keep-textarea" :style="{backgroundColor: note.style.backgroundColor}" cols="30" rows="15">{{note.info.txt}}</textarea>
         </div>
         <div v-if="note.type === 'img'" class="card-keep-txt">
             <h2>{{note.info.title}}</h2>

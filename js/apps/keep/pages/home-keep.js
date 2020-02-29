@@ -4,14 +4,13 @@ import cardsKeep from '../cmps/list-cards.cmp.js'
 
 export default {
     template: `
-    <section>
-        <h1>keep App!</h1>
-        <div class="input-main">
-            <current-input @currTxt="createNote" :notes="notes" :numType="numType"></current-input>
+    <section class="home-keep-container-all">
+        <div class="home-keep-input-main">
+            <current-input class="home-keep-current-input" @currTxt="createNote" :notes="notes" :numType="numType"></current-input>
             <div class="all-btn-input-main">
-                <button @click="changeType('list')"><img height="20px" src="./img/list.png" alt="List"></button>
-                <button @click="changeType('txt')"><img height="20px" src="../img/font.png" alt="Text"></button>
-                <button @click="changeType('img')"><img height="20px" src="../img/picture.png" alt="Image"></button>
+                <div @click="changeType('list')" title="List"><img height="40px" src="./img/list.png" alt="List"></div>
+                <div @click="changeType('txt')" title="Text"><img height="40px" src="../img/font.png" alt="Text"></div>
+                <div @click="changeType('img')" title="Image"><img height="40px" src="../img/picture.png" alt="Image"></div>
             </div>
         </div>
         <list-cards :notes="notes"></list-cards>

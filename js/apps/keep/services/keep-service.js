@@ -17,7 +17,7 @@ function query() {
 
 function _createNotes() {
     var notes = [{
-            style: { backgroundColor: "#c0c0c0" },
+            style: { backgroundColor: "#fff" },
             id: 11111,
             type: "txt",
             isPinned: false,
@@ -25,7 +25,7 @@ function _createNotes() {
         },
 
         {
-            style: { backgroundColor: "#c0c0c0" },
+            style: { backgroundColor: "#fff" },
             id: 22222,
             type: "img",
             info: {
@@ -36,7 +36,7 @@ function _createNotes() {
         },
 
         {
-            style: { backgroundColor: "#c0c0c0" },
+            style: { backgroundColor: "#fff" },
             id: 33333,
             type: "list",
             info: {
@@ -63,7 +63,7 @@ function addNote(txt, type) {
 function _putIntoFormat(txt, type) {
     if (type === "txt") {
         return {
-            style: { backgroundColor: "#c0c0c0" },
+            style: { backgroundColor: "#fff" },
             id: _makeId(),
             type: "txt",
             isPinned: false,
@@ -71,7 +71,7 @@ function _putIntoFormat(txt, type) {
         }
     } else if (type === "img") {
         return {
-            style: { backgroundColor: "#c0c0c0" },
+            style: { backgroundColor: "#fff" },
             id: _makeId(),
             type: "img",
             info: {
@@ -81,7 +81,7 @@ function _putIntoFormat(txt, type) {
         }
     } else if (type === "list") {
         return {
-            style: { backgroundColor: "#c0c0c0" },
+            style: { backgroundColor: "#fff" },
             id: _makeId(),
             type: "list",
             info: {

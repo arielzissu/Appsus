@@ -3,6 +3,7 @@ export default {
     template: `
     <section >      
             <input type="text" 
+            class="current-input-input"
              v-model="txt"
              :placeholder="kindOfNote"
             @keyup.enter="getChanged()">

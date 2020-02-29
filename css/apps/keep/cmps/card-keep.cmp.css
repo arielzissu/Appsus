@@ -11,12 +11,7 @@
 }
 
 .card-keep-cmp {
-    background-color: rgb(240, 234, 155);
-}
-
-.card-keep-txt>* {
-    /* background-color: rgb(228, 119, 47); */
-    /* background-color: rgb(240, 241, 159); */
+    border: black 1.5px solid;
 }
 
 .img-note {
@@ -24,8 +19,8 @@
     margin-left: 10px;
 }
 
-textarea {
-    height: 191px;
-    width: 228px;
-    /* border: none; */
+.card-keep-textarea {
+    height: 190px;
+    width: 150px;
+    border: none;
 }
