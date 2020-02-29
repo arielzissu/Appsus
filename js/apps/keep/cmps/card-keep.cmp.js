@@ -5,11 +5,11 @@ export default {
     <section class="card-keep-container-main" :style="{backgroundColor: note.style.backgroundColor}" @click="onCliked">
 
         <div  v-if="note.type === 'txt'" class="card-keep-txt">
-            <textarea class="card-keep-textarea" :style="{backgroundColor: note.style.backgroundColor}" cols="30" rows="15">{{note.info.txt}}</textarea>
+            <p class="card-keep-p" :style="{backgroundColor: note.style.backgroundColor}" cols="30" rows="15">{{note.info.txt}}</p>
         </div>
         <div v-if="note.type === 'img'" class="card-keep-txt">
             <h2>{{note.info.title}}</h2>
-            <img class='img-note' :src="note.info.url" alt="your pic">
+            <img class='img-note' :src="note.info.url" alt="Wrang URL">
         </div>
         <div v-if="note.type === 'list'" class="card-keep-txt">
             <ul v-for="todo in note.info.todos">
@@ -17,10 +17,10 @@ export default {
             </ul>
         </div>
 
-        <div v-if="isCliked">
-            <button @click="onDelete"><img height="20px" src="../img/delete.png" alt="Delete"></button>
-            <button @click="onPin"><img height="20px" src="../img/pin.png" alt="Pin"></button>
-                <input @change="changeColor()" value="note.style.backgroundColor" v-model="note.style.backgroundColor" type="color">
+        <div class="card-keep-two-btn" v-if="isCliked">
+            <div @click="onDelete"><img height="20px" src="../img/delete.png" alt="Delete" title="Delete"></div>
+            <div @click="onPin"><img height="20px" src="../img/pin.png" alt="Pin" title="Pin"></div>
+                <input @change="changeColor()" value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color">
         </div>
     </section>
     `,

@@ -1,3 +1,9 @@
+.card-keep-container-main {
+    height: 180px;
+    width: 200px;
+    padding: 5px;
+}
+
 .note-prev-main-container {
     display: grid;
     gap: 10px;
@@ -6,8 +12,8 @@
 }
 
 .card-keep-txt {
-    height: 200px;
-    width: 150px;
+    height: 135px;
+    width: 200px;
 }
 
 .card-keep-cmp {
@@ -15,12 +21,15 @@
 }
 
 .img-note {
-    height: 7.5rem;
+    height: 6.5rem;
     margin-left: 10px;
 }
 
-.card-keep-textarea {
-    height: 190px;
-    width: 150px;
-    border: none;
+.card-keep-two-btn {
+    display: flex;
+}
+
+.card-keep-two-btn>* {
+    margin-right: 10px;
+    cursor: pointer;
 }
