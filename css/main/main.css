@@ -1,7 +1,15 @@
-@import "/css/apps/email/cmps/email-preview.cmp.css";
-@import "/css/apps/keep/keep-main.css";
+/* @import "/css/apps/email/cmps/email-preview.cmp.css"; */
+
+
+/* @import "/css/apps/email/cmps/email-preview.cmp.css"; */
+
+
+/* @import "/css/apps/keep/keep-main.css"; */
+
+@import "../apps/email/cmps/email-preview.cmp.css";
+@import "../apps/keep/keep-main.css";
 @import "./main-navBar.css";
-@import "/css/apps/email/cmps/email-preview.cmp.css";
+@import "../apps/email/cmps/email-preview.cmp.css";
 @import "../apps/email/cmps/home-email.cmp.css";
 @import "../apps/keep/cmps/card-keep.cmp.css";
 @import "../main/base.css";
