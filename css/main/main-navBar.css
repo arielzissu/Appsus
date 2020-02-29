@@ -26,17 +26,25 @@
 
 @media (max-width: 800px) {
     .nav-btn.first {
-        background-color: rgb(226, 219, 189);
+        background-color: rgb(243, 182, 67);
+    }
+    .nav-btn.first:hover {
+        background-color: rgb(233, 200, 140);
+        cursor: pointer;
     }
     .nav-btn.first.seccund {
-        background-color: rgb(241, 163, 163);
+        background-color: rgb(214, 117, 117);
+    }
+    .nav-btn.first.seccund:hover {
+        background-color: rgb(214, 136, 136);
+        cursor: pointer;
     }
     .nav-btn {
         text-align: center;
         border: none;
-        color: rgb(223, 241, 222);
+        color: rgb(3, 10, 3);
         font-weight: 500;
-        background-color: rgb(226, 219, 189);
+        background-color: rgb(235, 186, 97);
         margin-right: 6px;
         padding: 13px;
         height: 12px;
@@ -53,7 +61,7 @@
         right: 0;
         top: 0;
         height: 100vh;
-        background-color: #fff;
+        background-color: rgb(17, 13, 13);
         border-left: 1px solid #d2d2d2;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
         min-width: 200px;
@@ -66,10 +74,10 @@
     .menu-open .navbar-container {
         transform: translate(0, 0);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-        background-color: #a3d7f5;
+        background-color: #e4cf57e1;
     }
     .nav-btn:hover {
-        color: #eca625;
+        background-color: rgb(196, 178, 129);
     }
 }
 
