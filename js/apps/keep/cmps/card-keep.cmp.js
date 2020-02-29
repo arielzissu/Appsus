@@ -20,8 +20,8 @@ export default {
         </div>
 
         <div class="card-keep-two-btn" v-if="isCliked">
-            <div @click="onDelete"><img height="20px" src="../img/delete.png" alt="Delete" title="Delete"></div>
-            <div @click="onPin"><img height="20px" src="../img/pin.png" alt="Pin" title="Pin"></div>
+            <div @click="onDelete"><img height="20px" src="./img/delete.png" alt="Delete" title="Delete"></div>
+            <div @click="onPin"><img height="20px" src="./img/pin.png" alt="Pin" title="Pin"></div>
                 <input @input="onChangeColor(note.style.backgroundColor)" value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color">
         </div>
     </section>
