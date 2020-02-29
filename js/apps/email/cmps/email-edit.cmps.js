@@ -28,7 +28,7 @@ export default {
                 <button class="email-edit-btn-send" title="Send">Send</button> 
 
                 <router-link to="/email" exact>
-                    <div class="email-edit-btn-close" title="Delete"><img src="../img/delete.png" height="20px" alt="Delete"></div>
+                    <div class="email-edit-btn-close" title="Delete"><img src="./img/delete.png" height="20px" alt="Delete"></div>
                 </router-link>
             </div>
 

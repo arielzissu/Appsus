@@ -14,7 +14,7 @@ export default {
             <h5>Length page: {{readLength}}</h5>
             <h6>Year: {{readYear}}</h6>
             <h6 :class="{green: isLowPrice, red: isHighPrice}">Price: {{book.listPrice.amount}}
-                <img class="img-sale" v-if="isSale" src="../img/sale2.png" alt="In sale"/>
+                <img class="img-sale" v-if="isSale" src="./img/sale2.png" alt="In sale"/>
             </h6>
             <img :src="book.thumbnail">
             <p>Description: {{readDescription}}</p>
