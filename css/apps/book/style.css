@@ -1,0 +1,106 @@
+.cards-books-preview {
+    list-style-type: none;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.cards-books-preview>* {
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.book-details-container {
+    background-color: rgb(250, 214, 214);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border: black solid 2px;
+    padding: 10px;
+    width: 400px;
+}
+
+.book-details-container>* {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.book-title {
+    font-weight: 800;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.img-sale {
+    height: 40px;
+}
+
+.btn-read-more {
+    background-color: rgb(179, 237, 245);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-about-container {
+    flex-direction: row;
+}
+
+.img-about {
+    height: 300px;
+}
+
+.my-img {
+    height: 400px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.nav-btn {
+    border: black solid 2px;
+    padding: 10px;
+    margin: 0 5px 20px 10px;
+    color: black;
+    font-weight: 700;
+    background-color: rgb(226, 219, 189);
+}
+
+.nav-btn.first {
+    background-color: rgb(240, 223, 167);
+}
+
+.navbar {
+    margin-top: 25px;
+}
+
+.title-cards {
+    color: black;
+    font-weight: 700;
+}
+
+
+/* helper */
+
+.underLine-none {
+    text-decoration: none;
+}

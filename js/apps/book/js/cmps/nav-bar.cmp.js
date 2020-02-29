@@ -1,18 +1,15 @@
 export default {
     template: `
-        <div class="navbar-container">
+        <div class="navbar">
             <button class="nav-btn first" @click="goBack">GO BACK</button>
             <router-link class="nav-btn underLine-none" to="/" exact>
                 Home
             </router-link>
-            <router-link class="nav-btn underLine-none" to="/email" exact>
-            Mister Email
+            <router-link  class="nav-btn underLine-none" to="/about" exact>
+                About
             </router-link>
-            <router-link class="nav-btn underLine-none" to="/home-keep" exact>
-            Miss Keep
-            </router-link>
-            <router-link class="nav-btn underLine-none" to="/book" exact>
-            Miss Book
+            <router-link  class="nav-btn underLine-none" to="/book">
+                Books
             </router-link>
         </div>
     `,
