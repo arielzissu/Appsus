@@ -20,7 +20,7 @@ export default {
         <div class="card-keep-two-btn" v-if="isCliked">
             <div @click="onDelete"><img height="20px" src="../img/delete.png" alt="Delete" title="Delete"></div>
             <div @click="onPin"><img height="20px" src="../img/pin.png" alt="Pin" title="Pin"></div>
-                <input @change="changeColor()" value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color">
+                <input @input="onChangeColor(note.style.backgroundColor)" value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color">
         </div>
     </section>
     `,
@@ -49,6 +49,10 @@ export default {
         },
         onPin() {
             keepService.pinningNote(this.note.id)
+        },
+        onChangeColor(color) {
+            console.log('color: ', color);
+            keepService.changeColor(color, this.note.id);
         }
 
     }

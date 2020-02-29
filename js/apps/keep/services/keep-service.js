@@ -106,21 +106,27 @@ function getNoteById(noteId) {
 function removeNote(noteId) {
     console.log('noteId', noteId);
     const idx = notesDB.findIndex(note => note.id === noteId)
-    if (idx === -1) return Promise.reject('DID NOT REMOVE CAR')
+    if (idx === -1) return Promise.reject('DID NOT REMOVE NOTE')
     notesDB.splice(idx, 1);
     storageService.store(NOTE_KEY, notesDB);
-    return Promise.resolve('CAR REMOVED')
+    return Promise.resolve('NOTE REMOVED')
 }
 
 function pinningNote(noteId) {
     const idx = notesDB.findIndex(note => note.id === noteId)
-    if (idx === -1) return Promise.reject('DID NOT REMOVE CAR')
+    if (idx === -1) return Promise.reject('DID NOT PIN NOTE')
     let currNote = notesDB.splice(idx, 1);
     console.log('currNote', currNote[0]);
     notesDB.unshift(currNote[0]);
 
     storageService.store(NOTE_KEY, notesDB);
-    return Promise.resolve('CAR REMOVED')
+    return Promise.resolve('NOTE PINNING')
+}
+
+function changeColor(color, id) {
+    const idx = notesDB.findIndex(note => note.id === id)
+    notesDB[idx].style.backgroundColor = color;
+    storageService.store(NOTE_KEY, notesDB);
 }
 
 
@@ -139,5 +145,6 @@ export const keepService = {
     query,
     getNoteById,
     removeNote,
-    pinningNote
+    pinningNote,
+    changeColor
 }

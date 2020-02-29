@@ -2,19 +2,22 @@ export default {
     name: 'currInput',
     template: `
     <section >      
-            <input type="text" 
-            class="current-input-input"
-             v-model="txt"
-             :placeholder="kindOfNote"
-            @keyup.enter="getChanged()">
+        <input type="text" 
+        ref="myInput"
+        class="current-input-input"
+        v-model="txt"
+        placeholder="Text Somthing..."
+        @keyup.enter="getChanged()">
+        
     </section>
     `,
-    prop: ['numType'],
     data() {
         return {
-            txt: '',
-            kindOfNote: 'Writing text...'
+            txt: ''
         }
+    },
+    mounted() {
+        this.$refs.myInput.focus()
     },
     methods: {
         getChanged() {

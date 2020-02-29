@@ -6,7 +6,7 @@ export default {
     template: `
     <section class="home-keep-container-all">
         <div class="home-keep-input-main">
-            <current-input class="home-keep-current-input" @currTxt="createNote" :notes="notes" :numType="numType"></current-input>
+            <current-input class="home-keep-current-input" @currTxt="createNote"></current-input>
             <div class="all-btn-input-main">
                 <div @click="changeType('list')" title="List"><img height="40px" src="./img/list.png" alt="List"></div>
                 <div @click="changeType('txt')" title="Text"><img height="40px" src="../img/font.png" alt="Text"></div>
@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             numType: 'txt',
-            notes: []
+            notes: [],
         }
     },
     created() {
@@ -28,7 +28,7 @@ export default {
     },
     methods: {
         changeType(numType) {
-            this.numType = numType
+            this.numType = numType;
         },
         createNote(txt) {
             keepService.addNote(txt, this.numType)
