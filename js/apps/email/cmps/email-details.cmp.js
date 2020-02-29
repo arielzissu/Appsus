@@ -16,10 +16,10 @@ export default {
             
             <div class="two-btn-details">
                 <router-link :to="'/email/create/'+email.id"> 
-                    <div class="details-email-replay" title="Replay"><img src="../img/replay.png" height="20px" alt="Replay"></div>  
+                    <div class="details-email-replay" title="Replay"><img src="./img/replay.png" height="20px" alt="Replay"></div>  
                 </router-link>  
 
-                <div v-on:click="removeEmail" class="details-email-delete" title="Delete"><img src="../img/delete.png" height="20px" alt="Delete"></div>  
+                <div v-on:click="removeEmail" class="details-email-delete" title="Delete"><img src="./img/delete.png" height="20px" alt="Delete"></div>  
             </div>
         </section>
     `,
