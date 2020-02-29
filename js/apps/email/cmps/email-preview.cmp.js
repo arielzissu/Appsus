@@ -18,7 +18,8 @@ export default {
             return this.email.content.slice(0, 40) + '...'
         },
         sentTime() {
-            return new Date(this.email.sentAt).toUTCString()
+            // return new Date(this.email.sentAt).toUTCString()
+            return new Date(this.email.sentAt).toDateString()
         },
         replayNum() {
             if (this.email.replayNum === 1) return ''
