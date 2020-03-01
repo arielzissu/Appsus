@@ -8,9 +8,10 @@ export default {
         <div class="home-keep-input-main">
             <current-input class="home-keep-current-input" @currTxt="createNote"></current-input>
             <div class="all-btn-input-main">
-                <div @click="changeType('list')" title="List"><img height="40px" src="./img/list.png" alt="List"></div>
-                <div @click="changeType('txt')" title="Text"><img height="40px" src="./img/font.png" alt="Text"></div>
-                <div @click="changeType('img')" title="Image"><img height="40px" src="./img/picture.png" alt="Image"></div>
+                <div @click="changeType('list')" title="List"><img height="30px" src="./img/list2.png" alt="List"></div>
+                <div @click="changeType('txt')" title="Text"><img height="30px" src="./img/letter-a.png" alt="Text"></div>
+                <div @click="changeType('img')" title="Image"><img height="30px" src="./img/picture.png" alt="Image"></div>
+                <div @click="changeType('youtube')" title="Image"><img height="30px" src="./img/youtube.png" alt="Image"></div>
             </div>
         </div>
         <list-cards :notes="notes"></list-cards>
