@@ -11,8 +11,7 @@ export default {
                  </router-link> 
          
                     <button>Started</button>            
-                    <button>Sent Mail</button>            
-                    <!-- <button>Junk</button>             -->
+                    <!-- <button>Sent Mail</button> -->
             </div>         
             
         </div>

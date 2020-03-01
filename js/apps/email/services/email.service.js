@@ -11,7 +11,7 @@ export const emailService = {
     saveEmail,
     getEmptyEmail,
     removeEmail,
-    markAsRead  
+    markAsRead ,
 }
 
 function query() {
