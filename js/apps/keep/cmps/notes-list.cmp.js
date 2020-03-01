@@ -1,15 +1,15 @@
-import cardKeep from './card-keep.cmp.js'
+import notePreview from './note-preview.cmp.js'
 
 export default {
     template: `
     <section class="note-prev-main-container">
         <div v-for="note in notes" :key="note.id">
-            <card-keep class="card-keep-cmp" :note="note"></card-keep>
+            <note-preview class="card-keep-cmp" :note="note"></note-preview>
         </div>
     </section>
     `,
     props: ['notes'],
     components: {
-        'card-keep': cardKeep
+        'note-preview': notePreview
     }
 }

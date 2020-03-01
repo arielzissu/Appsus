@@ -4,20 +4,21 @@ export default {
         <button class="nav-bar-menu-btn" v-if="!isOpenNav" @click="toggleMenu">☰</button>
         <div @click="toggleMenu" class="navbar-container">
             <!-- <button class="nav-btn first seccund" v-if="isOpenNav" @click="toggleMenu">Close Nav</button> -->
-            <button class="nav-btn first" v-if="isOpenNav" @click="goBack">Go Back</button>
+            <button class="nav-btn first" @click="goBack">Go Back</button>
             <router-link class="nav-btn underLine-none" to="/" exact>
-                Home
-            </router-link>
-            <router-link class="nav-btn underLine-none" to="/email" exact>
-            Mister Email
-            </router-link>
-            <router-link class="nav-btn underLine-none" to="/home-keep" exact>
-            Miss Keep
-            </router-link>
-            <router-link class="nav-btn underLine-none" to="/book" exact>
-            Miss Book
-            </router-link>
-        </div>
+            Home
+        </router-link>
+        <router-link class="nav-btn underLine-none" to="/email" exact>
+        Mister Email
+    </router-link>
+    <router-link class="nav-btn underLine-none" to="/home-keep" exact>
+    Miss Keep
+</router-link>
+<router-link class="nav-btn underLine-none" to="/book" exact>
+Miss Book
+</router-link>
+<!-- <h1 class="nav-bar-title">APPSUS</h1> -->
+</div>
     </section>
     `,
     data() {

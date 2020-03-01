@@ -1,12 +1,12 @@
 import { keepService } from '../services/keep-service.js'
-import currentInput from '../cmps/current-input.cmp.js'
-import cardsKeep from '../cmps/list-cards.cmp.js'
+import notesInput from '../cmps/notes-input.cmp.js'
+import notesList from '../cmps/notes-list.cmp.js'
 
 export default {
     template: `
     <section class="home-keep-container-all">
         <div class="home-keep-input-main">
-            <current-input class="home-keep-current-input" @currTxt="createNote"></current-input>
+            <notes-input class="home-keep-current-input" @currTxt="createNote"></notes-input>
             <div class="all-btn-input-main">
                 <div @click="changeType('list')" title="List"><img height="30px" src="./img/list2.png" alt="List"></div>
                 <div @click="changeType('txt')" title="Text"><img height="30px" src="./img/letter-a.png" alt="Text"></div>
@@ -15,7 +15,7 @@ export default {
                 <div @click="changeType('audio')" title="Image"><img height="30px" src="./img/speaker.png" alt="Image"></div>
             </div>
         </div>
-        <list-cards :notes="notes"></list-cards>
+        <notes-list :notes="notes"></notes-list>
     </section>
     `,
     data() {
@@ -38,7 +38,7 @@ export default {
         }
     },
     components: {
-        'current-input': currentInput,
-        'list-cards': cardsKeep
+        'notes-input': notesInput,
+        'notes-list': notesList
     }
 }

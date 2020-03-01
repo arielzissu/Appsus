@@ -1,12 +1,10 @@
 .footer-text {
     width: 100%;
     position: relative;
-    margin-bottom: 50px;
-    text-align: center;
     font-weight: 500;
     background-color: #dedede;
-    /* min-height: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
