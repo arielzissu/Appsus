@@ -23,6 +23,7 @@ export default {
         getChanged() {
             this.$emit('currTxt', this.txt);
             this.txt = '';
+            location.reload();
         }
     },
 }

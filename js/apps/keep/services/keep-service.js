@@ -25,7 +25,7 @@ function _createNotes() {
         },
 
         {
-            style: { backgroundColor: "#fff" },
+            style: { backgroundColor: "#ff2080" },
             id: 22222,
             type: "img",
             info: {
@@ -43,10 +43,91 @@ function _createNotes() {
                 label: "How was it:",
                 todos: [
                     "Do that",
-                    "Do this"
+                    "Do like this",
+                    "Do with this",
+                    "Do out this",
+                    "Do this dsa",
                 ]
             }
-        }
+        },
+
+        {
+            style: { backgroundColor: "#fff" },
+            id: 44444,
+            type: "youtube",
+            info: { txt: "https://www.youtube.com/embed/owsfdh4gxyc" }
+        },
+        {
+            style: { backgroundColor: "#ffff00" },
+            id: 23233,
+            type: "list",
+            info: {
+                label: "How was it:",
+                todos: [
+                    "To clean that",
+                    "Play with the cat",
+                    "Learn with him",
+                    "Do this list",
+                    "Clean the room",
+                    "Learn to english",
+                    "Wash the room",
+                    "Take the dog outside",
+                ]
+            }
+        },
+        {
+            style: { backgroundColor: "#fff" },
+            id: 11111,
+            type: "txt",
+            isPinned: false,
+            info: { txt: "I love Java Script, But it doesn't love me (;" }
+        },
+        {
+            style: { backgroundColor: "#ff8080" },
+            id: 22222,
+            type: "img",
+            info: {
+                url: "https://images.theconversation.com/files/304244/original/file-20191128-178107-9wucox.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip",
+                title: "My picture:"
+            },
+
+        },
+        {
+            style: { backgroundColor: "#fff" },
+            id: 23233,
+            type: "list",
+            info: {
+                label: "How was it:",
+                todos: [
+                    "To clean that",
+                    "Play with the cat",
+                    "Learn with him",
+                    "Do this list",
+                    "Clean the room",
+                    "Learn to english",
+                    "Wash the room",
+                    "Take the dog outside",
+                ]
+            }
+        },
+        {
+            style: { backgroundColor: "#fff" },
+            id: 23233,
+            type: "list",
+            info: {
+                label: "How was it:",
+                todos: [
+                    "To clean that",
+                    "Play with the cat",
+                    "Learn with him",
+                    "Do this list",
+                    "Clean the room",
+                    "Learn to english",
+                    "Wash the room",
+                    "Take the dog outside",
+                ]
+            }
+        },
     ];
     return notes;
 }
@@ -88,6 +169,20 @@ function _putIntoFormat(txt, type) {
                 label: "How was it:",
                 todos: _changeStrToArr(txt)
             }
+        }
+    } else if (type === "youtube") {
+        return {
+            style: { backgroundColor: "#fff" },
+            id: _makeId(),
+            type: "youtube",
+            info: { txt }
+        }
+    } else if (type === "audio") {
+        return {
+            style: { backgroundColor: "#fff" },
+            id: _makeId(),
+            type: "audio",
+            info: { txt }
         }
     }
 }

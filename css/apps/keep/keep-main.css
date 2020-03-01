@@ -10,10 +10,11 @@
 .home-keep-input-main {
     padding: 5px;
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(223, 225, 225);
     display: flex;
     justify-content: space-around;
-    width: 500px;
+    width: 650px;
+    align-items: center;
 }
 
 .input-main-home {
@@ -21,16 +22,48 @@
 }
 
 .all-btn-input-main {
-    width: 10rem;
+    width: 13rem;
     display: flex;
     justify-content: space-between;
 }
 
 .all-btn-input-main>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
+    margin-right: 15px;
 }
 
 .home-keep-current-input {
     display: flex;
     align-items: center;
+}
+
+.bold {
+    background-color: rgba(199, 194, 194, 0.699);
+}
+
+@media(max-width: 700px) {
+    .home-keep-input-main {
+        width: 400px;
+    }
+    div span img {
+        height: 25px;
+    }
+}
+
+@media(max-width: 445px) {
+    .home-keep-input-main {
+        width: 300px;
+    }
+    .all-btn-input-main {
+        width: 14rem;
+    }
+    div span img {
+        height: 20px;
+    }
+    .all-btn-input-main {
+        margin-left: 14px;
+    }
 }

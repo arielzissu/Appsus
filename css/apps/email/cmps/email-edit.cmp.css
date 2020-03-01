@@ -31,6 +31,7 @@
 .email-edit-textarea {
     width: 100%;
     border: 1px black;
+    height: 275px;
 }
 
 .email-edit-input {

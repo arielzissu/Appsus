@@ -1,19 +1,18 @@
 .card-keep-container-main {
-    height: 180px;
-    width: 200px;
+    min-width: 200px;
     padding: 5px;
+    break-inside: avoid;
+    margin-top: 10px;
+    background-color: rgb(255, 205, 255);
+    width: 259px;
+    border-radius: 5px;
+    box-shadow: 1px 1px grey;
 }
 
 .note-prev-main-container {
-    display: grid;
-    gap: 15px;
+    column-count: 4;
+    column-gap: 10px;
     padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
-
-.card-keep-txt {
-    height: 135px;
-    width: 200px;
 }
 
 .card-keep-cmp {
@@ -21,7 +20,7 @@
 }
 
 .img-note {
-    height: 6.5rem;
+    height: 9rem;
     margin-left: 10px;
 }
 
@@ -32,4 +31,22 @@
 .card-keep-two-btn>* {
     margin-right: 10px;
     cursor: pointer;
+}
+
+@media(max-width: 1165px) {
+    .note-prev-main-container {
+        column-count: 3;
+    }
+}
+
+@media(max-width: 875px) {
+    .note-prev-main-container {
+        column-count: 2;
+    }
+}
+
+@media(max-width: 600px) {
+    .note-prev-main-container {
+        column-count: 1;
+    }
 }

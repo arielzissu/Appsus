@@ -2,3 +2,17 @@
     height: 20px;
     width: 250px;
 }
+
+@media(max-width: 700px) {
+    .current-input-input {
+        height: 15px;
+        width: 180px;
+    }
+}
+
+@media(max-width: 445px) {
+    .current-input-input {
+        height: 10px;
+        width: 100px;
+    }
+}

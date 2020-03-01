@@ -18,13 +18,20 @@ export default {
                 <li v-for="todo in note.info.todos">{{todo}}</li>
             </ul>
         </div>
+        <div v-if="note.type === 'youtube'" class="card-keep-txt">
+            <iframe :src="note.info.txt" width="260" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div width="320" v-if="note.type === 'audio'" class="card-keep-txt">
+            <audio src="note.info.txt" controls> 
+        </div>
 
         <div class="card-keep-two-btn" v-if="isCliked">
             <div @click="onDelete"><img height="20px" src="./img/delete.png" alt="Delete" title="Delete"></div>
             <div @click="onPin"><img height="20px" src="./img/pin.png" alt="Pin" title="Pin"></div>
             <div>
                 <label>
-                <input hidden @input="onChangeColor(note.style.backgroundColor)" :value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color"/>
+                    <img src="./img/palette.png" height="20px" title="Colors" alt="Colors">
+                <input hidden @input="onChangeColor(note.style.backgroundColor)" value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color"/>
                 </label>
             </div>
         </div>
