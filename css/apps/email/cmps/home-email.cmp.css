@@ -1,4 +1,9 @@
 .email-home-container {
+    height: 555px;
+    margin: 0;
+}
+
+.email-home-container {
     display: flex;
 }
 

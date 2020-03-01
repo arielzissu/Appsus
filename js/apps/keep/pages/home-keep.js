@@ -12,6 +12,7 @@ export default {
                 <div @click="changeType('txt')" title="Text"><img height="30px" src="./img/letter-a.png" alt="Text"></div>
                 <div @click="changeType('img')" title="Image"><img height="30px" src="./img/picture.png" alt="Image"></div>
                 <div @click="changeType('youtube')" title="Image"><img height="30px" src="./img/youtube.png" alt="Image"></div>
+                <div @click="changeType('audio')" title="Image"><img height="30px" src="./img/speaker.png" alt="Image"></div>
             </div>
         </div>
         <list-cards :notes="notes"></list-cards>

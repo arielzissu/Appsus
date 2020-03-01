@@ -2,10 +2,10 @@ export default {
     props: ['email'],
     template: `
     <div class="card-email" v-bind:class="{ unreadBg: !email.isRead }">          
-    <span class="preview-sender">{{email.sender}}{{replayNum}} </span>
-    <span class="preview-subject">{{email.subject}}</span>
-    <span class="preview-some-content">{{shortContent}}</span>
-    <span class="preview-sent-time">{{sentTime}} </span>  
+        <span class="preview-sender">{{email.sender}}{{replayNum}} </span>
+        <span class="preview-subject">{{email.subject}}</span>
+        <span class="preview-some-content">{{shortContent}}</span>
+        <span class="preview-sent-time">{{sentTime}} </span>  
     </div>
     `,
     data() {

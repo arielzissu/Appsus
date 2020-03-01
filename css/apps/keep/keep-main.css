@@ -1,7 +1,10 @@
 .home-keep-container-all {
+    min-height: 595px;
+}
+
+.container-all {
     margin-top: -15px;
     background-color: rgb(224, 217, 217);
-    height: 100vh;
 }
 
 .home-keep-input-main {

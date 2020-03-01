@@ -14,15 +14,19 @@ export default {
             <img class='img-note' :src="note.info.url" alt="Wrang URL">
         </div>
         <div v-if="note.type === 'list'" class="card-keep-txt">
-            <ul v-for="todo in note.info.todos">
-                <li>{{todo}}</li>
+            <ul>
+                <li v-for="todo in note.info.todos">{{todo}}</li>
             </ul>
         </div>
 
         <div class="card-keep-two-btn" v-if="isCliked">
             <div @click="onDelete"><img height="20px" src="./img/delete.png" alt="Delete" title="Delete"></div>
             <div @click="onPin"><img height="20px" src="./img/pin.png" alt="Pin" title="Pin"></div>
-                <input @input="onChangeColor(note.style.backgroundColor)" value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color">
+            <div>
+                <label>
+                <input hidden @input="onChangeColor(note.style.backgroundColor)" :value="note.style.backgroundColor" v-model="note.style.backgroundColor" title="Colors" type="color"/>
+                </label>
+            </div>
         </div>
     </section>
     `,

@@ -2,8 +2,8 @@ export default {
     template: `
     <section>
         <button class="nav-bar-menu-btn" v-if="!isOpenNav" @click="toggleMenu">☰</button>
-        <div class="navbar-container">
-            <button class="nav-btn first seccund" v-if="isOpenNav" @click="toggleMenu">Close Nav</button>
+        <div @click="toggleMenu" class="navbar-container">
+            <!-- <button class="nav-btn first seccund" v-if="isOpenNav" @click="toggleMenu">Close Nav</button> -->
             <button class="nav-btn first" v-if="isOpenNav" @click="goBack">Go Back</button>
             <router-link class="nav-btn underLine-none" to="/" exact>
                 Home
