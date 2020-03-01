@@ -1,0 +1,39 @@
+.email-create-form {
+    display: flex;
+    flex-direction: column;
+    border: black solid 1px;
+}
+
+.email-edit-form-container>* {
+    border: black solid 0.5px;
+}
+
+.two-btn-email-edit {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: none;
+}
+
+.email-edit-btn-close {
+    cursor: pointer;
+}
+
+.email-edit-btn-send {
+    cursor: pointer;
+}
+
+.email-edit-header {
+    background-color: rgb(68, 64, 64);
+    color: white;
+}
+
+.email-edit-textarea {
+    width: 100%;
+    border: 1px black;
+}
+
+.email-edit-input {
+    border: 1px black;
+    width: 89%;
+}

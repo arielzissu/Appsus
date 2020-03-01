@@ -1,14 +1,33 @@
-.input-main {
-    background-color: rgb(204, 247, 247);
+.home-keep-container-all {
+    margin-top: -15px;
+    background-color: rgb(224, 217, 217);
+    height: 100vh;
+}
+
+.home-keep-input-main {
+    padding: 5px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     width: 500px;
+}
+
+.input-main-home {
+    width: 300px;
+}
+
+.all-btn-input-main {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .all-btn-input-main>* {
     height: 50px;
 }
 
-.input-main-home {
-    width: 300px;
+.home-keep-current-input {
+    display: flex;
+    align-items: center;
 }

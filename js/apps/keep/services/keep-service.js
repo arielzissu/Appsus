@@ -17,7 +17,7 @@ function query() {
 
 function _createNotes() {
     var notes = [{
-            style: { backgroundColor: "#00d" },
+            style: { backgroundColor: "#fff" },
             id: 11111,
             type: "txt",
             isPinned: false,
@@ -25,18 +25,18 @@ function _createNotes() {
         },
 
         {
-            style: 'blue',
+            style: { backgroundColor: "#fff" },
             id: 22222,
             type: "img",
             info: {
                 url: "https://images.theconversation.com/files/304244/original/file-20191128-178107-9wucox.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip",
                 title: "My picture:"
             },
-            style: { backgroundColor: "#00d" }
+
         },
 
         {
-            style: { backgroundColor: "#00d" },
+            style: { backgroundColor: "#fff" },
             id: 33333,
             type: "list",
             info: {
@@ -63,7 +63,7 @@ function addNote(txt, type) {
 function _putIntoFormat(txt, type) {
     if (type === "txt") {
         return {
-            style: { backgroundColor: "#00d" },
+            style: { backgroundColor: "#fff" },
             id: _makeId(),
             type: "txt",
             isPinned: false,
@@ -71,7 +71,7 @@ function _putIntoFormat(txt, type) {
         }
     } else if (type === "img") {
         return {
-            style: { backgroundColor: "#00d" },
+            style: { backgroundColor: "#fff" },
             id: _makeId(),
             type: "img",
             info: {
@@ -81,7 +81,7 @@ function _putIntoFormat(txt, type) {
         }
     } else if (type === "list") {
         return {
-            style: { backgroundColor: "#00d" },
+            style: { backgroundColor: "#fff" },
             id: _makeId(),
             type: "list",
             info: {
@@ -103,6 +103,31 @@ function getNoteById(noteId) {
     })
 }
 
+function removeNote(noteId) {
+    const idx = notesDB.findIndex(note => note.id === noteId)
+    if (idx === -1) return Promise.reject('DID NOT REMOVE NOTE')
+    notesDB.splice(idx, 1);
+    storageService.store(NOTE_KEY, notesDB);
+    return Promise.resolve(noteId);
+}
+
+function pinningNote(noteId) {
+    const idx = notesDB.findIndex(note => note.id === noteId)
+    if (idx === -1) return Promise.reject('DID NOT PIN NOTE')
+    let currNote = notesDB.splice(idx, 1);
+    notesDB.unshift(currNote[0]);
+
+    storageService.store(NOTE_KEY, notesDB);
+    return Promise.resolve('NOTE PINNING')
+}
+
+function changeColor(color, id) {
+    const idx = notesDB.findIndex(note => note.id === id)
+    notesDB[idx].style.backgroundColor = color;
+    storageService.store(NOTE_KEY, notesDB);
+}
+
+
 function _makeId(length = 5) {
     var txt = '';
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -116,5 +141,8 @@ function _makeId(length = 5) {
 export const keepService = {
     addNote,
     query,
-    getNoteById
+    getNoteById,
+    removeNote,
+    pinningNote,
+    changeColor
 }

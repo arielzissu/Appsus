@@ -1,0 +1,24 @@
+.email-details-container {
+    border: grey solid 1px;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.email-details-container>* {
+    margin-bottom: 20px;
+}
+
+.two-btn-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.details-sender {
+    font-weight: 700;
+}
+
+.details-email-delete:hover {
+    cursor: pointer;
+}

@@ -1,26 +1,32 @@
-.card-email{
-border: black solid 1.5px;
-padding: 5px;
-display: flex;
-justify-content: space-between;
-}
-
-.card-email:hover{
-background-color: rgb(187, 179, 179);
-}
-
-.card-email>*{
-color:black;
-font-weight: 500;
-}
-
-a{
-    text-decoration:none;
-}
-
-.unreadBg{
+.card-email {
+    border: black solid 1.5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
     background-color: gray;
 }
 
+.card-email:hover {
+    background-color: rgb(187, 179, 179);
+}
 
+.card-email>* {
+    color: black;
+    font-weight: 500;
+}
 
+a {
+    text-decoration: none;
+}
+
+.unreadBg {
+    background-color: rgb(252, 252, 252);
+}
+
+.preview-sender {
+    font-weight: 800;
+}
+
+.preview-subject {
+    font-weight: 700;
+}
