@@ -22,3 +22,15 @@
 .email-left-navbar {
     margin: 10px 5px 0 5px;
 }
+
+@media(max-width: 900px) {
+    .email-list-container {
+        min-height: 400px;
+    }
+}
+
+@media(max-width: 600px) {
+    .email-list-container {
+        min-height: 200px;
+    }
+}
