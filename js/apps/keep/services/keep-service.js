@@ -88,7 +88,7 @@ function _createNotes() {
             type: "img",
             info: {
                 url: "https://images.theconversation.com/files/304244/original/file-20191128-178107-9wucox.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip",
-                title: "My picture:"
+                title: "My dog:"
             },
 
         },
@@ -128,6 +128,27 @@ function _createNotes() {
                 ]
             }
         },
+        {
+            style: { backgroundColor: "#fff" },
+            id: 13121,
+            type: "txt",
+            isPinned: false,
+            info: { txt: "bla bla bla" }
+        },
+        {
+            style: { backgroundColor: "#fff" },
+            id: 23239,
+            type: "list",
+            info: {
+                label: "How was it:",
+                todos: [
+                    "puki",
+                    "muki",
+                    "chuki",
+
+                ]
+            }
+        },
     ];
     return notes;
 }
@@ -157,7 +178,7 @@ function _putIntoFormat(txt, type) {
             type: "img",
             info: {
                 url: txt,
-                title: "My picture:" ////////לתת למשתמש לבחור את  הכותרת
+                title: "My picture:"
             },
         }
     } else if (type === "list") {
