@@ -10,6 +10,10 @@
     height: 50px;
 }
 
+.home-container {
+    min-height: 592px;
+}
+
 @media (max-width: 1000px) {
     .home-page-title {
         font-weight: 800;
