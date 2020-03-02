@@ -14,6 +14,12 @@
     align-items: center;
 }
 
+.navbar-btns>* {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .nav-btn-back {
     background-color: rgb(233, 208, 127);
     display: flex;
