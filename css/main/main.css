@@ -8,6 +8,7 @@
 @import "../apps/email/cmps/home-email.cmp.css";
 @import "../apps/keep/cmps/card-keep.cmp.css";
 @import "../apps/email/cmps/email-list.css";
+@import "../apps/email/cmps/email-filter.cmp.css";
 @import "../apps/keep/keep-main.css";
 @import "../apps/book/style.css";
 @import "../main/base.css";

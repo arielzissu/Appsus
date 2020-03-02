@@ -1,12 +1,12 @@
 // export default {
 //     template: `
 //     <section class="email-filter">
-        
+
 //         <input type="text" 
 //             @keyup.enter="emitFilter"
 //             placeholder="email subject" 
 //             v-model="filterBy.subject" 
-           
+
 //         />
 //         <!-- <input type="number"
 //             @keyup.enter="emitFilter" 
@@ -50,29 +50,30 @@
 // /> -->
 export default {
     template: `
-    <section class="email-filter">
-        <input type="text" 
+    <section class="email-filter-container">
+        <input class="email-filter-search" type="text" 
             placeholder="email srarching" 
-            v-model="filterBy.subject" />       
+            v-model="filterBy.subject" />
+            <img class="email-filter-img-search" src="../img/search.png" alt="">       
     </section>
     `,
     data() {
         return {
-            filterBy: {subject: ''}
+            filterBy: { subject: '' }
             //  minSpeed: 0
-           
+
         }
     },
     watch: {
-       filterBy: {
-           handler(newVal) {
+        filterBy: {
+            handler(newVal) {
                 console.log('subject WAS CHANGED! To:', newVal.subject);
                 this.emitFilter();
-           },
-           deep: true
-       } 
+            },
+            deep: true
+        }
     },
-    methods:{
+    methods: {
         emitFilter() {
             this.$emit('set-filter', this.filterBy)
         }

@@ -1,0 +1,15 @@
+.email-filter-container {
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.email-filter-search {
+    padding: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.email-filter-img-search {
+    width: 25px;
+}
