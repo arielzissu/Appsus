@@ -52,7 +52,7 @@ export default {
     template: `
     <section class="email-filter-container">
         <input class="email-filter-search" type="text" 
-            placeholder="email srarching" 
+            placeholder="Email searching" 
             v-model="filterBy.subject" />
             <img class="email-filter-img-search" src="../img/search.png" alt="">       
     </section>

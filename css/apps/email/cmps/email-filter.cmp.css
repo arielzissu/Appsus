@@ -13,3 +13,31 @@
 .email-filter-img-search {
     width: 25px;
 }
+
+@media (max-width: 1160px) {
+    .email-filter-container {
+        padding: 5px 0 5px 0;
+    }
+    .email-filter-img-search {
+        width: 22px;
+    }
+}
+
+@media (max-width: 800px) {
+    .email-filter-search {
+        height: 8px;
+    }
+    .email-filter-img-search {
+        width: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .email-filter-search {
+        width: 136px;
+        height: 6px;
+    }
+    .email-filter-img-search {
+        width: 18px;
+    }
+}

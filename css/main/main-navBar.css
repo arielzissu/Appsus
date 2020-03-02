@@ -15,11 +15,13 @@
 }
 
 .nav-btn-back {
-    background-color: rgb(252, 141, 107);
+    background-color: rgb(233, 208, 127);
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     padding: 0.5rem;
+    width: 5.5rem;
+    border: black solid 2px;
 }
 
 .nav-bar-horse-img {
@@ -46,6 +48,10 @@
 }
 
 @media (max-width: 800px) {
+    .nav-bar-main-container {
+        padding: 10px;
+        height: 25px;
+    }
     .nav-btn-back {
         display: none;
     }
@@ -76,6 +82,7 @@
     }
     .nav-bar-menu-btn {
         display: inline-block;
+        text-align: center;
         margin-left: 94%;
     }
     .navbar-btns {

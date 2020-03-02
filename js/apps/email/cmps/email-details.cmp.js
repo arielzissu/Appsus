@@ -5,14 +5,14 @@ export default {
     template: `
         <section v-if="email" class="email-details-container">
 
-            <div class="details-sender">From: {{email.sender}}</div>
-
+            
             <div class="details-header"> 
-                <h1 class="details-subject">{{email.subject}}</h1> 
+                <div class="details-sender">From: {{email.sender}}</div>
             </div>
-
-
+            <div class="details-subject">{{email.subject}}</div> 
             <article class="details-content">{{email.content}}</article>
+
+
             
             <div class="two-btn-details">
                 <router-link :to="'/email/create/'+email.id"> 

@@ -1,6 +1,5 @@
 .email-details-container {
     border: grey solid 1px;
-    /* height: 500px; */
     display: flex;
     flex-direction: column;
 }

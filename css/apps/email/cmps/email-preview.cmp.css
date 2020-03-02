@@ -30,3 +30,33 @@ a {
 .preview-subject {
     font-weight: 700;
 }
+
+@media (max-width: 1160px) {
+    .card-email>* {
+        font-size: 13px;
+    }
+    .email-filter-container {
+        padding: 5px 0 5px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .email-filter-search {
+        height: 8px;
+    }
+    .card-email>* {
+        font-size: 10px;
+    }
+    .preview-some-content {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    .email-filter-search {
+        width: 189px;
+    }
+    .card-email>* {
+        font-size: 10px;
+    }
+}
