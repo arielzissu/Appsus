@@ -10,7 +10,7 @@
 }
 
 .btn-compose {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-right: 10px;
     border-radius: 50px;
     width: 100px;
@@ -19,16 +19,16 @@
 }
 
 .btn-compose:hover {
-    background-color: rgb(221, 120, 120);
+    background-color: rgb(243, 209, 60);
 }
 
 .left-nav-btn {
     width: 100px;
-    height: 30px;
+    height: 35px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }
 
 .left-nav-btn:hover {
-    background-color: rgb(221, 120, 120);
+    background-color: rgb(243, 209, 60);
 }

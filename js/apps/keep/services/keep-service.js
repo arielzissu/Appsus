@@ -18,7 +18,7 @@ function query() {
 function _createNotes() {
     var notes = [{
             style: { backgroundColor: "#fff" },
-            id: 11111,
+            id: 13121,
             type: "txt",
             isPinned: false,
             info: { txt: "Fullstack Me Baby!" }
@@ -26,7 +26,7 @@ function _createNotes() {
 
         {
             style: { backgroundColor: "#ff2080" },
-            id: 22222,
+            id: 22626,
             type: "img",
             info: {
                 url: "https://images.theconversation.com/files/304244/original/file-20191128-178107-9wucox.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip",
@@ -37,7 +37,7 @@ function _createNotes() {
 
         {
             style: { backgroundColor: "#fff" },
-            id: 33333,
+            id: 33337,
             type: "list",
             info: {
                 label: "How was it:",
@@ -53,7 +53,7 @@ function _createNotes() {
 
         {
             style: { backgroundColor: "#fff" },
-            id: 44444,
+            id: 44148,
             type: "youtube",
             info: { txt: "https://www.youtube.com/embed/owsfdh4gxyc" }
         },
@@ -77,14 +77,14 @@ function _createNotes() {
         },
         {
             style: { backgroundColor: "#fff" },
-            id: 11111,
+            id: 11341,
             type: "txt",
             isPinned: false,
             info: { txt: "I love Java Script, But it doesn't love me (;" }
         },
         {
             style: { backgroundColor: "#ff8080" },
-            id: 22222,
+            id: 22121,
             type: "img",
             info: {
                 url: "https://images.theconversation.com/files/304244/original/file-20191128-178107-9wucox.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip",
@@ -94,7 +94,7 @@ function _createNotes() {
         },
         {
             style: { backgroundColor: "#fff" },
-            id: 23233,
+            id: 23234,
             type: "list",
             info: {
                 label: "How was it:",
@@ -112,7 +112,7 @@ function _createNotes() {
         },
         {
             style: { backgroundColor: "#fff" },
-            id: 23233,
+            id: 23239,
             type: "list",
             info: {
                 label: "How was it:",

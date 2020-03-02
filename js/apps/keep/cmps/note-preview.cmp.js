@@ -21,8 +21,8 @@ export default {
         <div v-if="note.type === 'youtube'" class="card-keep-txt">
             <iframe :src="note.info.txt" width="260" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div width="320" v-if="note.type === 'audio'" class="card-keep-txt">
-            <audio src="note.info.txt" controls> 
+        <div  v-if="note.type === 'audio'" class="card-keep-txt">
+            <audio src="note.info.txt" controls></audio>
         </div>
 
         <div class="card-keep-two-btn" v-if="isCliked">
