@@ -11,7 +11,7 @@
 }
 
 .home-container {
-    min-height: 592px;
+    max-height: 592px;
 }
 
 @media (max-width: 1000px) {
