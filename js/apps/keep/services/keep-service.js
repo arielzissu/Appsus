@@ -199,7 +199,7 @@ function getNoteById(noteId) {
 }
 
 function removeNote(noteId) {
-    const idx = notesDB.findIndex(note => note.id === noteId)
+    const idx = toFindIndex(noteId);
     if (idx === -1) return Promise.reject('DID NOT REMOVE NOTE')
     notesDB.splice(idx, 1);
     storageService.store(NOTE_KEY, notesDB);
@@ -207,7 +207,7 @@ function removeNote(noteId) {
 }
 
 function pinningNote(noteId) {
-    const idx = notesDB.findIndex(note => note.id === noteId)
+    const idx = toFindIndex(noteId);
     if (idx === -1) return Promise.reject('DID NOT PIN NOTE')
     let currNote = notesDB.splice(idx, 1);
     notesDB.unshift(currNote[0]);
@@ -216,10 +216,14 @@ function pinningNote(noteId) {
     return Promise.resolve('NOTE PINNING')
 }
 
-function changeColor(color, id) {
-    const idx = notesDB.findIndex(note => note.id === id)
+function changeColor(color, noteId) {
+    const idx = toFindIndex(noteId);
     notesDB[idx].style.backgroundColor = color;
     storageService.store(NOTE_KEY, notesDB);
+}
+
+function toFindIndex(noteId) {
+    return notesDB.findIndex(note => note.id === noteId)
 }
 
 

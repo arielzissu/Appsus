@@ -6,12 +6,13 @@
 
 .home-keep-input-main {
     padding: 5px;
-    margin: auto;
-    background-color: rgb(228, 228, 236);
-    display: flex;
-    justify-content: space-around;
     width: 650px;
+    background-color: rgb(228, 228, 236);
+    margin: auto;
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
 }
 
 .input-main-home {
@@ -28,8 +29,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 50px;
     margin-right: 15px;
+}
+
+.all-btn-input-main>*:active {
+    top: 1px;
 }
 
 .home-keep-current-input {
@@ -38,7 +44,10 @@
 }
 
 .bold {
-    background-color: rgba(199, 194, 194, 0.699);
+    transition: .5s;
+    box-sizing: border-box;
+    padding: 3px;
+    border: black 3px solid;
 }
 
 @media(max-width: 700px) {

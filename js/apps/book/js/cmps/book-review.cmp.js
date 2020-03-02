@@ -25,7 +25,7 @@ export default {
         onDeleteReview(id) {
             bookService.deleteCurrReview(id, this.bookId)
                 .then(bookId => {
-                    eventBus.$emit('showMsg', { txt: `delete the ${bookId} car` })
+                    eventBus.$emit('showMsg', { txt: `delete the ${bookId} book` })
                 })
             this.isNotDeleted = false;
         }

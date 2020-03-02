@@ -30,7 +30,9 @@
 }
 
 .left-nav-btn:hover {
+    transition: 1s;
     background-color: rgb(243, 209, 60);
+    width: 100px;
 }
 
 @media (max-width: 1160px) {

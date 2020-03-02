@@ -58,7 +58,7 @@ export default {
         onDelete() {
             keepService.removeNote(this.note.id)
                 .then(ans => {
-                    eventBus.$emit('showMsg', { txt: `Deleted the ${ans}(id) note` })
+                    eventBus.$emit('showMsg', { txt: `Deleted note` })
                 })
         },
         onPin() {

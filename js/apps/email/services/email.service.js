@@ -2,7 +2,6 @@ import { storageService } from '../../../main/services/storage.service.js'
 import { utilService } from '../../../main/services/util.service.js'
 const EMAILS_KEY = 'emails';
 var emailsDB = [];
-// let isMails = false;
 
 
 export const emailService = {
@@ -16,12 +15,11 @@ export const emailService = {
 
 function query() {
     let emails = storageService.load(EMAILS_KEY);
-    if (!emails) { //////only for test
+    if (!emails) {
         emails = createEmails();
         storageService.store(EMAILS_KEY, emails)
     }
     if (emails) {
-        // isMails=true;
         emailsDB = emails;
         return Promise.resolve(emailsDB);
     }
@@ -32,14 +30,14 @@ function getById(emailId) {
     return Promise.resolve(email)
 }
 
-function createEmails() { //create starter data
+function createEmails() {
     const emails = [{
             id: "OXeMG8wNskc",
             subject: 'Open me',
             body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930694,
-            content: 'gfdggfgdggfdggfdgdfggfdgf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Roi'
@@ -50,7 +48,7 @@ function createEmails() { //create starter data
             body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930598,
-            content: 'Lorem ipsum bla bla gassaf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Ariel'
@@ -62,7 +60,7 @@ function createEmails() { //create starter data
             body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930589,
-            content: 'gfdg dsd sd fhgd hdhf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Rita'
@@ -74,7 +72,7 @@ function createEmails() { //create starter data
             body: 'Pick up2!',
             isRead: false,
             sentAt: 1551133940099,
-            content: 'gfdg fhgdh dhf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Moshe'
@@ -86,7 +84,7 @@ function createEmails() { //create starter data
             body: 'Pick up!',
             isRead: false,
             sentAt: 1551133930599,
-            content: 'gf dgfh gdhdhf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Shuki'
@@ -98,7 +96,7 @@ function createEmails() { //create starter data
             body: 'Pick up2!',
             isRead: false,
             sentAt: 1551133930599,
-            content: 'gfdgfa sdsadhgdh dhf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Puki'
@@ -110,7 +108,7 @@ function createEmails() { //create starter data
             body: 'Pick up2!',
             isRead: false,
             sentAt: 1551193830599,
-            content: 'lorizxc borizxc dori',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Moshe'
@@ -122,7 +120,7 @@ function createEmails() { //create starter data
             body: 'Pick up222!',
             isRead: false,
             sentAt: 1531133730599,
-            content: 'maasd koreadasd? aniadr',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'Roi'
@@ -134,7 +132,7 @@ function createEmails() { //create starter data
             body: 'Pick up22!',
             isRead: false,
             sentAt: 1541233960599,
-            content: 'gfdgfhgdhdhf',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             sentTo: 'me',
             replayNum: 1,
             sender: 'David'
@@ -167,7 +165,6 @@ function _addEmail(email) {
 
 function removeEmail(emailId) {
     const idx = emailsDB.findIndex(email => email.id === emailId)
-        // if(idx === -1) return Promise.reject('DID NOT REMOVE EMAIL')
     emailsDB.splice(idx, 1);
     storageService.store(EMAILS_KEY, emailsDB)
     return Promise.resolve()
