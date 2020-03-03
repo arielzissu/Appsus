@@ -21,6 +21,8 @@
 }
 
 .img-note {
+    border-radius: 5px;
+    border: black 2px solid;
     height: 9rem;
     margin-left: 10px;
 }

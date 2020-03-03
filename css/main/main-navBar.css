@@ -29,6 +29,12 @@
     width: 5.5rem;
     border: black solid 2px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-btn-back:hover {
+    background: rgb(241, 235, 19);
+    background: radial-gradient(circle, rgba(241, 235, 19, 1) 0%, rgba(241, 92, 59, 1) 59%);
 }
 
 .nav-bar-horse-img {
@@ -45,6 +51,11 @@
     height: 0.3rem;
     display: flex;
     align-items: center;
+}
+
+.nav-btn:hover {
+    background: rgb(241, 235, 19);
+    background: radial-gradient(circle, rgba(241, 235, 19, 1) 0%, rgba(241, 92, 59, 1) 59%);
 }
 
 .nav-bar-menu-btn {
@@ -87,6 +98,7 @@
         height: 12px;
         width: 90%;
         box-shadow: 3px 2px 0px 0px black;
+        justify-content: center;
     }
     .nav-bar-menu-btn {
         display: inline-block;
@@ -118,9 +130,9 @@
         display: flex;
         justify-content: flex-start;
     }
-    .nav-btn:hover {
+    /* .nav-btn:hover {
         background-color: rgb(196, 178, 129);
-    }
+    } */
     .nav-bar-horse-img {
         display: none;
     }
