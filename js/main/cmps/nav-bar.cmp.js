@@ -3,7 +3,6 @@ export default {
     <section class="nav-bar-main-container">
         <button class="nav-bar-menu-btn" v-if="!isOpenNav" @click="toggleMenu">☰</button>
         <button class="nav-btn-back" @click="goBack">Go Back</button>
-
         
         <div @click="toggleMenu" class="navbar-btns">
             <router-link class="nav-btn underLine-none" to="/" exact>

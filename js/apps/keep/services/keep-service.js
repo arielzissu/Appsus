@@ -5,7 +5,7 @@ var notesDB = [];
 
 function query() {
     var notes = storageService.load(NOTE_KEY);
-    if (!notes) { //////this if is only for test
+    if (!notes) {
         notes = _createNotes();
         storageService.store(NOTE_KEY, notes)
     }

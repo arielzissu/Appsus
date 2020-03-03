@@ -18,8 +18,6 @@ const routes = [
             { path: ':id', component: emailDetails }
         ]
     },
-    // { path: '/email/create/:id?', component: emailEdit },
-    // { path: '/email/:id', component: emailDetails },
     { path: '/home-keep', component: keepApp },
     { path: '/book', component: booksApp },
     { path: '/book/:bookId', component: BookDetails },
