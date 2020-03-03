@@ -28,15 +28,10 @@ export default {
         </div>
     </section>
     `,
-    // @reviewsClosed="showReviews=false"
-    // <button @click="showReviews=true">Open reviews</button>
-
-
     data() {
         return {
             longText: true,
             book: null,
-            // showReviews: false
         }
     },
     computed: {

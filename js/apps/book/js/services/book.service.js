@@ -4,7 +4,6 @@ import { utilService } from '../services/util.service.js'
 const BOOKS_KEY = 'books';
 var booksDB = createBooks();
 
-
 export const bookService = {
     query,
     getBookById,
@@ -35,7 +34,6 @@ function addReview(bookId, review) {
     getBookById(bookId).then(book => {
         console.log('book: ', book);
         book.reviews.push(JSON.parse(JSON.stringify(review)));
-        // storageService.store(BOOKS_KEY, booksDB);
     });
 }
 

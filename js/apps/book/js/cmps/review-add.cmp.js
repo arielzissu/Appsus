@@ -1,8 +1,5 @@
 import { bookService } from '../services/book.service.js'
 
-
-
-
 export default {
     template: `
     <form @submit="saveReview" action="">

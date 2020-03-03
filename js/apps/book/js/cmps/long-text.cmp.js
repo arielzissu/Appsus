@@ -1,7 +1,7 @@
 export default {
     template: `
     <div class="long-text">{{abbreviatedText}}</div>
-`,
+    `,
     props: ['txt'],
     computed: {
         abbreviatedText() {

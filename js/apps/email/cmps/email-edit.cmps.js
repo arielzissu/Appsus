@@ -1,5 +1,4 @@
 import { emailService } from '../services/email.service.js'
-// import {eventBus} from '../../../main/services/event-bus.service'
 
 export default {
     template: `
@@ -43,7 +42,7 @@ export default {
     },
     created() {
         const emailId = this.$route.params.id;
-        if (emailId) { //if its replay mail
+        if (emailId) {
             emailService.getById(emailId)
                 .then(email => {
                     let copyEmail = JSON.parse(JSON.stringify(email)) // DEEP copy
@@ -61,10 +60,6 @@ export default {
                 .then(() => {
                     this.$router.push('/email');
                 })
-                // .then(() => {
-                //     eventBus.$emit('showMsg',{txt:'Youer email sent successfully to:'})
-                //     // this.$router.push('/email')
-                // })
         },
 
     },

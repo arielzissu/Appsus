@@ -1,18 +1,14 @@
 import { emailService } from '../services/email.service.js'
 
-
 export default {
     template: `
         <section v-if="email" class="email-details-container">
 
-            
             <div class="details-header"> 
                 <div class="details-sender">From: {{email.sender}}</div>
             </div>
             <div class="details-subject">{{email.subject}}</div> 
             <article class="details-content">{{email.content}}</article>
-
-
             
             <div class="two-btn-details">
                 <router-link :to="'/email/create/'+email.id"> 
@@ -37,7 +33,6 @@ export default {
     },
     methods: {
         getemail() {
-            //  this.existId = +this.$route.params.id
             emailService.getById(this.existId)
                 .then(email => {
                     this.email = email
@@ -50,9 +45,7 @@ export default {
                     console.log(`email deleted succesfully`)
                     this.$router.push('/email')
                 })
-
         }
-
     },
     created() {
         this.existId = this.$route.params.id;
@@ -60,5 +53,4 @@ export default {
             .then(email => this.email = email);
         emailService.markAsRead(this.existId);
     },
-
 }

@@ -8,29 +8,16 @@ export default {
         <span class="preview-sent-time">{{sentTime}} </span>  
     </div>
     `,
-    data() {
-        return {
-
-        }
-    },
     computed: {
         shortContent() {
             return this.email.content.slice(0, 40) + '...'
         },
         sentTime() {
-            // return new Date(this.email.sentAt).toUTCString()
             return new Date(this.email.sentAt).toDateString()
         },
         replayNum() {
             if (this.email.replayNum === 1) return ''
-                // else return ''
             return '(' + this.email.replayNum + ')'
         }
     },
-    methods: {
-
-    },
-    created() {
-        // this.isRead=email.isRead
-    }
 }

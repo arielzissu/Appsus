@@ -1,4 +1,3 @@
-// import './book-preview.cmp.js'
 import bookPreview from './book-preview.cmp.js'
 
 export default {

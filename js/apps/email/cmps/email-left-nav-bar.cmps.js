@@ -12,9 +12,7 @@ export default {
          
                     <button class="left-nav-btn">Started</button>            
                     <button class="left-nav-btn">Sent Mail</button>            
-                    <!-- <button>Junk</button>             -->
             </div>         
-            
         </div>
     `,
 }

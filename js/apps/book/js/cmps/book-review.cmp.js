@@ -1,7 +1,6 @@
 import { eventBus } from '../services/event-bus.service.js'
 import { bookService } from '../services/book.service.js'
 
-
 export default {
     template: `
         <section>

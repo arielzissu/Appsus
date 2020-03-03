@@ -3,15 +3,12 @@ import bookFilter from '../cmps/book-filter.cmp.js'
 import bookList from '../cmps/book-list.cmp.js'
 import bookDetails from './book-details.cmp.js'
 
-
-
 export default {
     template: `
     <section class="book-app">
         <book-details v-if="selectedBook" :book="selectedBook"></book-details> 
         <book-filter @filtered="setFilter"></book-filter>
         <book-list :books="booksToShow" @select-book="setBook"></book-list>
-        
     </section>
     `,
     data() {

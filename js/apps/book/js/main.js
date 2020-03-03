@@ -3,7 +3,6 @@ import bookApp from './pages/book-app.cmp.js'
 import navBar from './cmps/nav-bar.cmp.js'
 import myMsg from './cmps/my-msg.cmp.js'
 
-
 new Vue({
     el: '#app',
     router,
