@@ -1,36 +1,94 @@
 .email-home-container {
-    min-height: 535px;
-    margin: 0;
-}
-
-.email-home-container {
-    display: flex;
+  min-height: 535px;
+  margin: 15px 15px;
+  display: flex;
 }
 
 .left-nav-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .email-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 595px;
+}
+
+.email-home-menu-btn {
+  position: fixed;
+  top: 65px;
+  left: 35px;
+  border: unset;
+  color: black;
+  font-size: 20px;
+  background-color: rgb(234, 235, 236);
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 1100px) {
+  .email-home-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 595px;
+  }
+  .email-list-container {
+    min-height: 400px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .left-nav-btn {
+    text-align: center;
+    border: none;
+    color: rgb(3, 10, 3);
+    font-weight: 500;
+    background-color: rgb(165, 199, 245);
+    margin-right: 6px;
+    padding: 13px;
+    box-shadow: 3px 2px 0px 0px black;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+  .email-home-menu-btn {
+    display: inline-block;
+    text-align: center;
+  }
+  .email-left-navbar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #657a8fe1;
+    border-left: 1px solid #d2d2d2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    min-width: 200px;
+    transform: translate(100%, 0);
+    transition: transform 0.8s, box-shadow 0.3s;
+    z-index: 2;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .email-menu-open .email-left-navbar {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background-color: #657a8fe1;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
-.email-left-navbar {
-    margin: 10px 5px 0 5px;
-}
-
-@media(max-width: 900px) {
-    .email-list-container {
-        min-height: 400px;
-    }
-}
-
-@media(max-width: 600px) {
-    .email-list-container {
-        min-height: 200px;
-    }
+@media (max-width: 600px) {
+  .email-home-menu-btn {
+    top: 55px;
+    left: 25px;
+  }
+  .email-list-container {
+    min-height: 200px;
+  }
 }

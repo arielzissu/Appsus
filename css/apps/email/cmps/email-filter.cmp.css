@@ -1,43 +1,43 @@
 .email-filter-container {
-    padding: 10px 0 10px 0;
-    display: flex;
-    align-items: center;
+  padding: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
 }
 
 .email-filter-search {
-    padding: 5px;
-    width: 300px;
-    margin-right: 10px;
+  padding: 5px;
+  width: 300px;
+  margin-right: 10px;
 }
 
 .email-filter-img-search {
-    width: 25px;
+  width: 25px;
 }
 
-@media (max-width: 1160px) {
-    .email-filter-container {
-        padding: 5px 0 5px 0;
-    }
-    .email-filter-img-search {
-        width: 22px;
-    }
+@media (max-width: 1100px) {
+  .email-filter-container {
+    padding: 15px 0px 10px 60px;
+  }
+  .email-filter-img-search {
+    width: 22px;
+  }
 }
 
 @media (max-width: 800px) {
-    .email-filter-search {
-        height: 8px;
-    }
-    .email-filter-img-search {
-        width: 20px;
-    }
+  .email-filter-search {
+    height: 8px;
+  }
+  .email-filter-img-search {
+    width: 20px;
+  }
 }
 
 @media (max-width: 620px) {
-    .email-filter-search {
-        width: 136px;
-        height: 6px;
-    }
-    .email-filter-img-search {
-        width: 18px;
-    }
+  .email-filter-search {
+    width: 136px;
+    height: 6px;
+  }
+  .email-filter-img-search {
+    width: 18px;
+  }
 }

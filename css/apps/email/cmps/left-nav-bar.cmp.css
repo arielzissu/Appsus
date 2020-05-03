@@ -1,60 +1,76 @@
 .all-btn-side-nav {
-    display: flex;
-    flex-direction: column;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
-.all-btn-side-nav>* {
-    text-decoration: none;
-    cursor: pointer;
+.all-btn-side-nav > * {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .btn-compose {
-    margin-bottom: 15px;
-    margin-right: 10px;
-    border-radius: 50px;
-    width: 100px;
-    height: 40px;
-    cursor: pointer;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border-radius: 50px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .btn-compose:hover {
-    background-color: rgb(243, 209, 60);
+  background-color: rgb(243, 209, 60);
 }
 
 .left-nav-btn {
-    width: 100px;
-    height: 35px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+  width: 100px;
+  height: 35px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .left-nav-btn:hover {
-    transition: 1s;
-    background-color: rgb(243, 209, 60);
+  transition: 1s;
+  background-color: rgb(243, 209, 60);
+  width: 100px;
+}
+
+@media (max-width: 1100px) {
+  .all-btn-side-nav {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .all-btn-side-nav > * {
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .btn-compose-main {
+    margin: 10px auto;
+    width: 90%;
+    text-align: center;
+  }
+  .btn-compose {
+    margin-bottom: unset;
+    margin-right: unset;
+    border-radius: unset;
     width: 100px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    color: rgb(3, 10, 3);
+    font-weight: 500;
+    background-color: rgb(165, 199, 245);
+    margin-right: 6px;
+    padding: 13px;
+    box-shadow: 3px 2px 0px 0px black;
+  }
 }
-
-@media (max-width: 1160px) {
-    .btn-compose {
-        width: 100px;
-        height: 30px;
-    }
-    .left-nav-btn {
-        width: 80px;
-        height: 25px;
-    }
-}
-
-@media (max-width: 800px) {
-    .btn-compose {
-        width: 100px;
-        height: 25px;
-    }
-    .left-nav-btn {
-        width: 80px;
-        height: 20px;
-    }
-}
-
-@media (max-width: 620px) {}

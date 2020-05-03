@@ -7,6 +7,7 @@ export default {
     template: `
     <section class="book-app">
         <book-details v-if="selectedBook" :book="selectedBook"></book-details> 
+        <h2 class="book-app-title">Books List</h2>
         <book-filter @filtered="setFilter"></book-filter>
         <book-list :books="booksToShow" @select-book="setBook"></book-list>
     </section>

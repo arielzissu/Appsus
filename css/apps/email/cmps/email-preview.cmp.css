@@ -1,62 +1,62 @@
 .card-email {
-    border: black solid 1.5px;
-    padding: 9px;
-    display: flex;
-    justify-content: space-between;
-    background-color: gray;
+  border: black solid 1.5px;
+  padding: 9px;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
 }
 
 .card-email:hover {
-    background-color: rgb(187, 179, 179);
+  background-color: rgb(187, 179, 179);
 }
 
-.card-email>* {
-    color: black;
-    font-weight: 500;
+.card-email > * {
+  color: black;
+  font-weight: 500;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .unreadBg {
-    background-color: rgb(252, 252, 252);
+  background-color: rgb(252, 252, 252);
 }
 
 .preview-sender {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .preview-subject {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 @media (max-width: 1160px) {
-    .card-email>* {
-        font-size: 13px;
-    }
-    .email-filter-container {
-        padding: 5px 0 5px 0;
-    }
+  .card-email > * {
+    font-size: 16px;
+  }
+  .email-filter-container {
+    padding: 5px 0 5px 0;
+  }
 }
 
 @media (max-width: 800px) {
-    .email-filter-search {
-        height: 8px;
-    }
-    .card-email>* {
-        font-size: 10px;
-    }
-    .preview-some-content {
-        display: none;
-    }
+  .email-filter-search {
+    height: 8px;
+  }
+  .card-email > * {
+    font-size: 14px;
+  }
+  .preview-some-content {
+    display: none;
+  }
 }
 
 @media (max-width: 620px) {
-    .email-filter-search {
-        width: 189px;
-    }
-    .card-email>* {
-        font-size: 10px;
-    }
+  .email-filter-search {
+    width: 189px;
+  }
+  .card-email > * {
+    font-size: 14px;
+  }
 }

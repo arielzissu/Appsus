@@ -1,9 +1,14 @@
 export default {
     template: `
     <section class="nav-bar-main-container">
-        <button class="nav-bar-menu-btn" v-if="!isOpenNav" @click="toggleMenu">☰</button>
-        <button class="nav-btn-back" @click="goBack">Go Back</button>
+        <!-- <button class="nav-btn-back" @click="goBack">Go Back</button> -->
         
+        <router-link to="/" exact>
+            <img class="nav-bar-horse-img" width="120px" src="./vectors/horse-blue.png" alt="Horse Image">  
+        </router-link>
+
+        <button class="nav-bar-menu-btn" v-if="!isOpenNav" @click="toggleMenu">☰</button>
+
         <div @click="toggleMenu" class="navbar-btns">
             <router-link class="nav-btn underLine-none" to="/" exact>
                 Home
@@ -20,9 +25,6 @@ export default {
             <router-link class="nav-btn underLine-none" to="/book" exact>
                 Miss Book
             </router-link>
-            <router-link to="/" exact>
-                <img class="nav-bar-horse-img" width="120px" src="./vectors/horse-blue.png" alt="Horse Image">  
-            </router-link>
         </div>
     </section>
     `,
@@ -33,11 +35,11 @@ export default {
     },
     methods: {
         goBack() {
-            this.$router.go(-1)
+            this.$router.go(-1);
         },
         toggleMenu() {
             document.body.classList.toggle('menu-open');
-            this.isOpenNav = !this.isOpenNav
+            this.isOpenNav = !this.isOpenNav;
         }
     }
 }

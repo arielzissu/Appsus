@@ -1,7 +1,7 @@
 export default {
     template: `
-    <section class="car-filter">
-        <h3>Filter books</h3>
+    <section class="cards-filter">
+        <h3 class="book-filter-title">Filter books</h3>
         <input type="text" 
             @keyup.enter="emitFilter"
             placeholder="Start typing ..." 

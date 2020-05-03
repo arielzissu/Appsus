@@ -1,146 +1,150 @@
 .nav-bar-main-container {
-    background-color: rgb(233, 204, 75);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    height: 45px;
+  background-color: rgb(233, 204, 75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  padding: 5px 60px;
+}
+
+.navbar {
+  margin-top: 25px;
 }
 
 .navbar-btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.navbar-btns>* {
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 5px;
+.navbar-btns > * {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .nav-btn-back {
-    background-color: rgb(233, 208, 127);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    width: 5.5rem;
-    border: black solid 2px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: rgb(233, 208, 127);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 5.5rem;
+  border: black solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .nav-btn-back:hover {
-    background: rgb(241, 235, 19);
-    background: radial-gradient(circle, rgba(241, 235, 19, 1) 0%, rgba(241, 92, 59, 1) 59%);
+  background: rgb(241, 235, 19);
+  background: radial-gradient(
+    circle,
+    rgba(241, 235, 19, 1) 0%,
+    rgba(241, 92, 59, 1) 59%
+  );
 }
 
 .nav-bar-horse-img {
-    width: 5.5rem;
+  width: 5.5rem;
 }
 
 .nav-btn {
-    border: black solid 2px;
-    color: black;
-    font-weight: 700;
-    background-color: rgb(226, 219, 189);
-    margin-right: 10px;
-    padding: 1rem;
-    height: 0.3rem;
-    display: flex;
-    align-items: center;
+  border: black solid 2px;
+  color: black;
+  font-weight: 700;
+  background-color: rgb(226, 219, 189);
+  margin-right: 10px;
+  padding: 1rem;
+  height: 0.3rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-btn:hover {
-    background: rgb(241, 235, 19);
-    background: radial-gradient(circle, rgba(241, 235, 19, 1) 0%, rgba(241, 92, 59, 1) 59%);
+  background: rgb(241, 235, 19);
+  background: radial-gradient(
+    circle,
+    rgba(241, 235, 19, 1) 0%,
+    rgba(241, 92, 59, 1) 59%
+  );
 }
 
 .nav-bar-menu-btn {
-    background-color: rgb(243, 182, 67);
-    display: none;
-    height: 30px;
-    width: 30px;
+  background-color: rgb(243, 182, 67);
+  display: none;
+  height: 30px;
+  width: 30px;
 }
 
 @media (max-width: 800px) {
-    .nav-bar-main-container {
-        padding: 10px;
-        height: 25px;
-    }
-    .nav-btn-back {
-        display: none;
-    }
-    .nav-btn.first {
-        background-color: rgb(243, 182, 67);
-    }
-    .nav-btn.first:hover {
-        background-color: rgb(233, 200, 140);
-        cursor: pointer;
-    }
-    .nav-btn.first.seccund {
-        background-color: rgb(214, 117, 117);
-    }
-    .nav-btn.first.seccund:hover {
-        background-color: rgb(214, 136, 136);
-        cursor: pointer;
-    }
-    .nav-btn {
-        text-align: center;
-        border: none;
-        color: rgb(3, 10, 3);
-        font-weight: 500;
-        background-color: rgb(235, 186, 97);
-        margin-right: 6px;
-        padding: 13px;
-        height: 12px;
-        width: 90%;
-        box-shadow: 3px 2px 0px 0px black;
-        justify-content: center;
-    }
-    .nav-bar-menu-btn {
-        display: inline-block;
-        text-align: center;
-        margin-left: 94%;
-    }
-    .navbar-btns {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        background-color: rgb(233, 185, 80);
-        border-left: 1px solid #d2d2d2;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
-        min-width: 200px;
-        transform: translate(100%, 0);
-        transition: transform .8s, box-shadow .3s;
-        z-index: 2;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-    .menu-open .navbar-btns {
-        transform: translate(0, 0);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-        background-color: #e4cf57e1;
-        display: flex;
-        justify-content: flex-start;
-    }
-    /* .nav-btn:hover {
-        background-color: rgb(196, 178, 129);
-    } */
-    .nav-bar-horse-img {
-        display: none;
-    }
+  .nav-bar-main-container {
+    height: 25px;
+    padding: 10px 15px;
+  }
+  .nav-btn.first {
+    background-color: rgb(243, 182, 67);
+  }
+  .nav-btn.first:hover {
+    background-color: rgb(233, 200, 140);
+    cursor: pointer;
+  }
+  .nav-btn.first.seccund {
+    background-color: rgb(214, 117, 117);
+  }
+  .nav-btn.first.seccund:hover {
+    background-color: rgb(214, 136, 136);
+    cursor: pointer;
+  }
+  .nav-btn {
+    text-align: center;
+    border: none;
+    color: rgb(3, 10, 3);
+    font-weight: 500;
+    background-color: rgb(235, 186, 97);
+    margin-right: 6px;
+    padding: 13px;
+    height: 12px;
+    width: 90%;
+    box-shadow: 3px 2px 0px 0px black;
+    justify-content: center;
+  }
+  .nav-bar-menu-btn {
+    display: inline-block;
+    text-align: center;
+  }
+  .navbar-btns {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: rgb(233, 185, 80);
+    border-left: 1px solid #d2d2d2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    min-width: 200px;
+    transform: translate(100%, 0);
+    transition: transform 0.8s, box-shadow 0.3s;
+    z-index: 2;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .menu-open .navbar-btns {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background-color: #e4cf57e1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav-bar-horse-img {
+    width: 3.5rem;
+  }
 }
-
 
 /* helper */
 
 .underLine-none {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -1,18 +1,28 @@
 .current-input-input {
-    height: 20px;
-    width: 250px;
+  height: 20px;
+  border: unset;
+  background-color: rgb(228, 228, 236);
+  border-bottom: black 2px solid;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  overflow: visible;
+  padding: 7px;
+}
+.current-input-input:focus {
+  outline: none;
 }
 
-@media(max-width: 700px) {
-    .current-input-input {
-        height: 15px;
-        width: 180px;
-    }
+@media (max-width: 700px) {
+  .current-input-input {
+    height: 15px;
+    /* width: 180px; */
+  }
 }
 
-@media(max-width: 445px) {
-    .current-input-input {
-        height: 10px;
-        width: 100px;
-    }
+@media (max-width: 445px) {
+  .current-input-input {
+    height: 10px;
+    /* width: 150px; */
+  }
 }

@@ -17,7 +17,7 @@ export default {
                 <img class="img-sale" v-if="isSale" src="./img/sale2.png" alt="In sale"/>
             </h6>
             <img :src="book.thumbnail">
-            <p>Description: {{readDescription}}</p>
+            <p class="book-desc">Description: {{readDescription}}</p>
             <div class="desc-container">
                 <long-text :txt="txt" v-if="longText"></long-text>
                 <p class="desc" v-else>{{book.description}}</p>
